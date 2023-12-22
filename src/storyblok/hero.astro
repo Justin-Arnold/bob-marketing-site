@@ -1,0 +1,11 @@
+---
+import { storyblokEditable } from '@storyblok/astro'
+
+const { blok } = Astro.props
+---
+
+<section {...storyblokEditable(blok)} class="text-center bg-blue-900 text-white p-10">
+    <h1 class="text-4xl font-bold mb-4">{blok.heading}</h1>
+    <p class="text-xl mb-6">{blok.subheading}</p>
+    <a class="btn btn-primary">{blok.callToAction}</a>
+  </section>
