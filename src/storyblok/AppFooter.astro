@@ -1,0 +1,43 @@
+---
+import { storyblokEditable } from '@storyblok/astro'
+import StoryblokComponent from '@storyblok/astro/StoryblokComponent.astro'
+
+const { blok } = Astro.props
+---
+
+<div {...storyblokEditable(blok)} class="bg-neutral p-2 flex flex-col">
+    <div class="flex justify-between">
+        <div>
+            {
+                blok.logo.map((subBlok) => {
+                    return <StoryblokComponent blok={subBlok} />
+                })
+            }
+        </div>
+        <div class="w-80">
+            {
+                blok.contact.map((subBlok) => {
+                    return <StoryblokComponent blok={subBlok} />
+                })
+            }
+        </div>
+    </div>
+    <div id="extraLinks" class="flex gap-4 items-center">
+        <p class="text-base-100">{blok.Copywrite}</p>
+        <span class="text-base-100">|</span>
+        {
+            blok.extraLinks.map((subBlok) => {
+                return (
+                    <StoryblokComponent blok={subBlok} />
+                    <span id="linkSeparator" class="text-base-100">|</span>
+                )
+            })
+        }
+    </div>
+</span>
+
+<style scoped>
+    #extraLinks #linkSeparator:last-child {
+        visibility: hidden;
+    }
+</style>

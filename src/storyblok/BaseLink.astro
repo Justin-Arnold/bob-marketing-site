@@ -12,7 +12,7 @@ const { blok } = Astro.props
             </button>
         </a>
     } else {
-        return <a href={blok.url.cached_url ?? blok.url.url} {...storyblokEditable(blok)}>
+        return <a href={blok.url.cached_url ?? blok.url.url} {...storyblokEditable(blok)} class="link link-hover link-accent">
             { blok.title }
         </a>
     }

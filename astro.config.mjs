@@ -30,6 +30,7 @@ export default defineConfig({
                 logoAndName: 'storyblok/AppLogo',
                 link: 'storyblok/BaseLink',
                 uiTeaserImage: 'storyblok/UiTeaserImage',
+                footer: 'storyblok/AppFooter',
             }
         })
     ]

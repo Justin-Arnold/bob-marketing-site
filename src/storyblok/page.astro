@@ -4,19 +4,20 @@ import StoryblokComponent from '@storyblok/astro/StoryblokComponent.astro'
 const { blok } = Astro.props
 ---
 
-<main {...storyblokEditable(blok)} class="relative w-full h-full flex flex-col items-center">
-    <div class="absolute w-full h-screen top-0 left-0">
+<main {...storyblokEditable(blok)} class="relative w-full h-fit flex flex-col items-center min-h-full">
+    <div class="absolute w-full h-full top-0 left-0">
         <div class="grid-bg ba-grid anim">
             <div class="inner"></div>
         </div>
     </div>
-    <div class="absolute w-full z-10 max-w-[1200px]">
+    <div class="w-full z-10 max-w-[1200px]">
         {
             blok.body?.map((blok) => {
                 return <StoryblokComponent blok={blok} />
             })
         }
     </div>
+
 </main>
 
 <style scoped>
