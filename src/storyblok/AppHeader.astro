@@ -1,0 +1,29 @@
+---
+import { storyblokEditable } from '@storyblok/astro'
+import StoryblokComponent from '@storyblok/astro/StoryblokComponent.astro'
+
+const { blok } = Astro.props
+console.log('header', blok)
+---
+
+<div {...storyblokEditable(blok)} class="h-12 bg-neutral p-2 flex items-center gap-2 justify-between overflow-hidden">
+    <div>
+        {
+            blok.leftSide.map((subBlok) => {
+                return <StoryblokComponent blok={subBlok} />
+            })
+        }
+    </div>
+    <div>
+        {
+            blok.rightSide.map((subBlok) => {
+                return <StoryblokComponent blok={subBlok} />
+            })
+        }
+    </div>
+
+</span>
+
+<!-- <div class="h-12 bg-white p-2 flex items-center">
+            <h1 class="text-3xl text-slate-800">Gradient for Buisness</h1>
+        </div> -->

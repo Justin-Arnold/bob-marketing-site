@@ -12,6 +12,9 @@ export default defineConfig({
             https: true,
         },
     },
+    redirects: {
+        '/home': '/'
+    },
     integrations: [
         tailwind(),
         storyblok({
@@ -21,7 +24,12 @@ export default defineConfig({
             },
             components: {
                 page: 'storyblok/page',
-                hero: 'storyblok/hero'
+                hero: 'storyblok/hero',
+                siteHeader: 'storyblok/AppHeader',
+                siteHeaderMenu: 'storyblok/AppHeaderMenu',
+                logoAndName: 'storyblok/AppLogo',
+                link: 'storyblok/BaseLink',
+                uiTeaserImage: 'storyblok/UiTeaserImage',
             }
         })
     ]

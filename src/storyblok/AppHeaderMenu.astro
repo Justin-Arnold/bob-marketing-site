@@ -1,0 +1,29 @@
+---
+import { storyblokEditable } from '@storyblok/astro'
+import StoryblokComponent from '@storyblok/astro/StoryblokComponent.astro'
+
+const { blok } = Astro.props
+
+const pathname = new URL(Astro.request.url).pathname;
+const currentPath = pathname.slice(1); // remove the first "/"
+
+console.log('path', pathname);
+---
+
+<div {...storyblokEditable(blok)} class="flex items-center gap-2 justify-center ">
+    <div class="">
+        {
+            blok.secondaryItems.map((subBlok) => {
+                return <StoryblokComponent blok={subBlok} />
+            })
+        }
+    </div>
+    <div class="">
+        {
+            blok.primaryItems.map((subBlok) => {
+                return <StoryblokComponent blok={subBlok} />
+            })
+        }
+    </div>
+
+</span>
