@@ -1,0 +1,19 @@
+---
+import { storyblokEditable } from '@storyblok/astro'
+
+const { blok } = Astro.props
+---
+
+{ () => {
+    if (blok.isButton === true) {
+        return <a href={blok.url.cached_url ?? blok.url.url}>
+            <button class="btn btn-primary btn-sm">
+                { blok.title }
+            </button>
+        </a>
+    } else {
+        return <a href={blok.url.cached_url ?? blok.url.url} {...storyblokEditable(blok)} class="link link-hover link-accent">
+            { blok.title }
+        </a>
+    }
+}}

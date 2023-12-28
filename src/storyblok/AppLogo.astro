@@ -1,0 +1,10 @@
+---
+import { storyblokEditable } from '@storyblok/astro'
+
+const { blok } = Astro.props
+---
+
+<span {...storyblokEditable(blok)} class="h-12 p-2 flex items-center gap-2">
+    <img src={blok.logo.filename} alt="Astro Logo" class="h-full" />
+    <h1 class="text-base-100 text-2xl font-thin">{blok.name}</h1>
+</span>
