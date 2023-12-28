@@ -12,13 +12,16 @@
   "dependencies": {
     "@astrojs/check": "^0.3.3",
     "@astrojs/tailwind": "^5.0.4",
+    "@iconify/tailwind": "^0.1.4",
     "@storyblok/astro": "^4.0.0",
     "astro": "^4.0.7",
+    "astro-icon": "^1.0.1",
     "daisyui": "latest",
     "tailwindcss": "^3.4.0",
     "typescript": "^5.3.3"
   },
   "devDependencies": {
+    "@iconify/json": "^2.2.162",
     "@vitejs/plugin-basic-ssl": "^1.0.2"
   }
 }
