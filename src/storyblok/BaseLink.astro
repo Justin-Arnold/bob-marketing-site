@@ -2,9 +2,8 @@
 import { storyblokEditable } from '@storyblok/astro'
 
 const { blok } = Astro.props
-
-console.log('test', blok.url)
 ---
+
 { () => {
     if (blok.isButton === true) {
         return <a href={blok.url.cached_url ?? blok.url.url}>
