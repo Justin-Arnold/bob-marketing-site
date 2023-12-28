@@ -30,7 +30,9 @@ export default defineConfig({
       link: 'storyblok/BaseLink',
       uiTeaserImage: 'storyblok/UiTeaserImage',
       footer: 'storyblok/AppFooter',
-      bannerText: 'storyblok/BannerText'
+      bannerText: 'storyblok/BannerText',
+      infoCard: 'storyblok/InfoCard',
+      cardGroup: 'storyblok/CardGroup',
     }
   }), icon()]
 });

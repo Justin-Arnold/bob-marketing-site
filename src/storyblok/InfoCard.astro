@@ -1,0 +1,13 @@
+---
+import { storyblokEditable } from '@storyblok/astro'
+
+const { blok } = Astro.props
+---
+
+<section {...storyblokEditable(blok)} class="card bg-neutral shadow-xl">
+    <div class="card-body text-base-100">
+        <span class="icon-[mdi--home] text-5xl"></span>
+        <h1 class="text-5xl mb-4 max-w-[500px]">{blok.heading}</h1>
+        <p class="text font-thin max-w-[500px]">{blok.subtext}</p>
+    </div>
+</section>
