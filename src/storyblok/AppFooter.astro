@@ -9,14 +9,14 @@ const { blok } = Astro.props
     <div class="flex justify-between">
         <div>
             {
-                blok.logo.map((subBlok) => {
+                blok.logo.map((subBlok: any) => {
                     return <StoryblokComponent blok={subBlok} />
                 })
             }
         </div>
         <div class="w-80">
             {
-                blok.contact.map((subBlok) => {
+                blok.contact.map((subBlok: any) => {
                     return <StoryblokComponent blok={subBlok} />
                 })
             }
@@ -26,7 +26,7 @@ const { blok } = Astro.props
         <p class="text-base-100">{blok.Copywrite}</p>
         <span class="text-base-100">|</span>
         {
-            blok.extraLinks.map((subBlok) => {
+            blok.extraLinks.map((subBlok: any) => {
                 return (
                     <StoryblokComponent blok={subBlok} />
                     <span id="linkSeparator" class="text-base-100">|</span>

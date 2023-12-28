@@ -10,14 +10,14 @@ const pathname = new URL(Astro.request.url).pathname;
 <div {...storyblokEditable(blok)} class="flex items-center gap-2 justify-center ">
     <div class="">
         {
-            blok.secondaryItems.map((subBlok) => {
+            blok.secondaryItems.map((subBlok: any) => {
                 return <StoryblokComponent blok={subBlok} />
             })
         }
     </div>
     <div class="">
         {
-            blok.primaryItems.map((subBlok) => {
+            blok.primaryItems.map((subBlok: any) => {
                 return <StoryblokComponent blok={subBlok} />
             })
         }
