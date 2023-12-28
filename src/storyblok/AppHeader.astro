@@ -8,14 +8,14 @@ const { blok } = Astro.props
 <div {...storyblokEditable(blok)} class="h-12 bg-neutral p-2 flex items-center gap-2 justify-between overflow-hidden">
     <div>
         {
-            blok.leftSide.map((subBlok) => {
+            blok.leftSide.map((subBlok: any) => {
                 return <StoryblokComponent blok={subBlok} />
             })
         }
     </div>
     <div>
         {
-            blok.rightSide.map((subBlok) => {
+            blok.rightSide.map((subBlok: any) => {
                 return <StoryblokComponent blok={subBlok} />
             })
         }

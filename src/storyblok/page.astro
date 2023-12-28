@@ -12,7 +12,7 @@ const { blok } = Astro.props
     </div>
     <div class="w-full z-10 max-w-[1200px]">
         {
-            blok.body?.map((blok) => {
+            blok.body?.map((blok: any) => {
                 return <StoryblokComponent blok={blok} />
             })
         }
