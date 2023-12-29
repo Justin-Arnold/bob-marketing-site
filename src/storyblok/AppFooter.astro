@@ -5,7 +5,7 @@ import StoryblokComponent from '@storyblok/astro/StoryblokComponent.astro'
 const { blok } = Astro.props
 ---
 
-<div {...storyblokEditable(blok)} class="bg-neutral p-2 flex flex-col mt-40">
+<div {...storyblokEditable(blok)} class="bg-neutral p-2 flex flex-col mt-40 w-full">
     <div class="flex justify-between">
         <div>
             {
@@ -16,7 +16,7 @@ const { blok } = Astro.props
         </div>
         <div class="w-80">
             {
-                blok.contact.map((subBlok: any) => {
+                blok.contactInformation.map((subBlok: any) => {
                     return <StoryblokComponent blok={subBlok} />
                 })
             }
