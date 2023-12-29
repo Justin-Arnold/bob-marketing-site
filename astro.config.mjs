@@ -33,6 +33,7 @@ export default defineConfig({
       bannerText: 'storyblok/BannerText',
       infoCard: 'storyblok/InfoCard',
       cardGroup: 'storyblok/CardGroup',
+      pricing_card: 'storyblok/PricingCard',
     }
   }), icon()]
 });
