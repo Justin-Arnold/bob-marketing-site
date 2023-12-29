@@ -15,10 +15,10 @@ const { blok } = Astro.props
     </div>
     <!-- Banner Subtext & CTA -->
     <div class="flex flex-col gap-4 text-left max-w-[400px]">
-        <p class="text font-thin text-neutral">{blok.subheading}</p>
+        <p class="text-lg font-thin text-neutral">{blok.subheading}</p>
         <span class="flex items-start gap-2 w-full">
-            <a class="btn btn-secondary btn-outline btn-sm max-w-fit">{blok.secondaryAction}</a>
-            <a class="btn btn-primary btn-sm max-w-fit">{blok.callToAction}</a>
+            <a class="btn btn-secondary btn-outline max-w-fit">{blok.secondaryAction}</a>
+            <a class="btn btn-primary max-w-fit">{blok.callToAction}</a>
         </span>
     </div>
 </section>
