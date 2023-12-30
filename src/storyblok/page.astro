@@ -8,13 +8,13 @@ const { blok } = Astro.props
 
 <main {...storyblokEditable(blok)} class="relative w-full h-fit flex flex-col justify-center items-center min-h-full">
     <BackgroundAnimation />
-    <div class="w-full z-[2] flex flex-col items-center">
+    <div class="w-full z-[2] flex flex-col items-center min-h-screen">
         {
             blok.header?.map((blok: any) => {
                 return <StoryblokComponent blok={blok} />
             })
         }
-        <div class="max-w-[1000px] flex flex-col">
+        <div class="max-w-[1000px] flex flex-col grow">
             {
                 blok.body?.map((blok: any) => {
                     return <StoryblokComponent blok={blok} />

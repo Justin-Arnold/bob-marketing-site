@@ -4,6 +4,7 @@ import storyblok from "@storyblok/astro";
 import basicSsl from '@vitejs/plugin-basic-ssl';
 
 import icon from "astro-icon";
+import { squooshImageService } from "astro/config";
 
 // https://astro.build/config
 export default defineConfig({
@@ -15,6 +16,9 @@ export default defineConfig({
   },
   redirects: {
     '/home': '/'
+  },
+  image: {
+    service: squooshImageService(),
   },
   integrations: [tailwind(), storyblok({
     accessToken: process.env.STORYBLOK_TOKEN,
