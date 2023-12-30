@@ -1,0 +1,22 @@
+---
+import { Image } from 'astro:assets';
+import localBoBImage from '../Assets/Images/bob.png';
+import BackgroundAnimation from '../components/BackgroundAnimation.astro'
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Astro</title>
+	</head>
+	<body class="min-h-screen bg-slate-800 grid place-items-center">
+        <BackgroundAnimation />
+        <div class="z-[2] flex flex-col items-center">
+            <span class="flex items-center text-[300px] gap-4">4<Image src={localBoBImage} alt="BoB"  height="300" />4</span>
+            <a href="/" class="btn btn-primary btn-lg">Back to Home</button>
+        </div>
+	</body>
+</html>
