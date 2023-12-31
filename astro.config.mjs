@@ -43,7 +43,7 @@ export default defineConfig({
                 cardGroup: 'storyblok/CardGroup',
                 pricing_card: 'storyblok/PricingCard',
                 horizontal_stack: 'storyblok/HorizontalStack',
-                full_bleed: 'storyblok/FullBleed',
+                full_bleed_hero: 'storyblok/blocks/hero/FullBleed',
             }
         }),
         icon()

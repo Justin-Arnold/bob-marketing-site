@@ -1,0 +1,19 @@
+---
+import { storyblokEditable } from '@storyblok/astro'
+import RichTextRenderer from "@storyblok/astro/RichTextRenderer.astro";
+
+const { blok } = Astro.props
+---
+
+<section {...storyblokEditable(blok)} class="full-bleed relative">
+    <div class="brightness-[30%]">
+        <img src={blok.background.filename} alt="UI Image" />
+    </div>
+    <div class="absolute top-0 left-0 w-full wrapper">
+        <p>{blok.heading_super}</p>
+        <h2 class="text-5xl">{blok.heading}</h2>
+        <div class="flex flex-col gap-4">
+            <RichTextRenderer richTextData={blok.body}/>
+        </div>
+    </div>
+</section>
