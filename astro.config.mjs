@@ -30,7 +30,7 @@ export default defineConfig({
                 region: "us"
             },
             components: {
-                page: 'storyblok/page',
+                page: 'storyblok/content/Page',
                 hero: 'storyblok/hero',
                 siteHeader: 'storyblok/AppHeader',
                 siteHeaderMenu: 'storyblok/AppHeaderMenu',
