@@ -21,7 +21,9 @@ export default defineConfig({
         service: squooshImageService(),
     },
     integrations: [
-        tailwind(),
+        tailwind({
+            applyBaseStyles: false,
+        }),
         storyblok({
             accessToken: process.env.STORYBLOK_TOKEN,
             apiOptions: {
