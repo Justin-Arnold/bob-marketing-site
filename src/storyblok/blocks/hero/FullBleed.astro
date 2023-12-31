@@ -1,6 +1,5 @@
 ---
 import { storyblokEditable } from '@storyblok/astro'
-import RichTextRenderer from "@storyblok/astro/RichTextRenderer.astro";
 
 const { blok } = Astro.props
 ---
@@ -9,11 +8,16 @@ const { blok } = Astro.props
     <div class="brightness-[30%]">
         <img src={blok.background.filename} alt="UI Image" />
     </div>
-    <div class="absolute top-0 left-0 w-full wrapper">
-        <p>{blok.heading_super}</p>
-        <h2 class="text-5xl">{blok.heading}</h2>
-        <div class="flex flex-col gap-4">
-            <RichTextRenderer richTextData={blok.body}/>
+    <div class="absolute top-20 left-0 w-full wrapper">
+        <div class="flex gap-8 items-center">
+            <div class="w-[500px] shrink-0">
+                <p class="text-primary text-2xl">{blok.heading_super}</p>
+                <h2 class="text-[60px] font-semibold leading-tight">{blok.heading}</h2>
+            </div>
+            <div class="flex flex-col gap-4">
+                <p class="text-xl">{blok.body}</p>
+                <button class="btn btn-primary w-fit">{blok.call_to_action}</button>
+            </div>
         </div>
     </div>
 </section>
