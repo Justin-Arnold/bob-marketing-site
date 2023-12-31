@@ -38,6 +38,8 @@ export default defineConfig({
       infoCard: 'storyblok/InfoCard',
       cardGroup: 'storyblok/CardGroup',
       pricing_card: 'storyblok/PricingCard',
+      horizontal_stack: 'storyblok/HorizontalStack',
+      full_bleed: 'storyblok/FullBleed',
     }
   }), icon()]
 });
