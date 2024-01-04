@@ -1,5 +1,6 @@
 ---
 import { storyblokEditable } from '@storyblok/astro'
+import SocialsBar from '../components/SocialsBar.astro'
 
 const { blok } = Astro.props
 ---
@@ -22,9 +23,7 @@ const { blok } = Astro.props
                         <p class="text-white">{blok.email}</p>
                     </span>
                 </div>
-                <div>
-                    Socials Here
-                </div>
+                <SocialsBar />
             </div>
             <div class="card-body">
                 <form class="flex flex-col gap-6">
