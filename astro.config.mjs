@@ -45,6 +45,10 @@ export default defineConfig({
                 horizontal_stack: 'storyblok/HorizontalStack',
                 full_bleed_hero: 'storyblok/blocks/hero/FullBleed',
                 personnel_card: 'storyblok/PersonnelCard',
+                flex_list: 'storyblok/FlexList',
+                statistic: 'storyblok/Statistic',
+                accent_button: 'storyblok/AccentButton',
+                contact_form: 'storyblok/ContactForm',
             }
         }),
         icon()
