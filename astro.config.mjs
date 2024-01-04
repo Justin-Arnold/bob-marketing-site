@@ -47,6 +47,7 @@ export default defineConfig({
                 personnel_card: 'storyblok/PersonnelCard',
                 flex_list: 'storyblok/FlexList',
                 statistic: 'storyblok/Statistic',
+                accent_button: 'storyblok/AccentButton',
             }
         }),
         icon()
