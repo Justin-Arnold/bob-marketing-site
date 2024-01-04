@@ -14,7 +14,7 @@ const { blok } = Astro.props
                 return <StoryblokComponent blok={blok} />
             })
         }
-        <div class="wrapper flex flex-col grow">
+        <div class="wrapper flex flex-col w-full">
             {
                 blok.body?.map((blok: any) => {
                     return <StoryblokComponent blok={blok} />

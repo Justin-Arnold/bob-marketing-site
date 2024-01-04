@@ -1,0 +1,36 @@
+---
+import { storyblokEditable } from '@storyblok/astro'
+
+const { blok } = Astro.props
+---
+
+<section {...storyblokEditable(blok)} class="w-full">
+    <div class="card bg-neutral w-full max-w-[700px] h-[400px] mx-auto overflow-clip">
+        <div class="flex w-full h-full">
+            <div class="bg-[#1ca2f9] h-full p-2 flex flex-col gap-4">
+                <div>
+                    <h1 class="text-2xl text-white">{blok.heading}</h1>
+                    <p class="">{blok.subheading}</p>
+                </div>
+                <div class="grow">
+                    <span class="flex items-center gap-2">
+                        <i class="icon-[mdi--phone]" />
+                        <p class="text-white">{blok.phone_number}</p>
+                    </span>
+                    <span class="flex items-center gap-2">
+                        <i class="icon-[mdi--mail]" />
+                        <p class="text-white">{blok.email}</p>
+                    </span>
+                </div>
+                <div>
+                    Socials Here
+                </div>
+            </div>
+            <div class="card-body">
+                <span class="icon-[mdi--home] text-5xl"></span>
+                <h1 class="text-5xl mb-4 max-w-[500px]">{blok.heading}</h1>
+                <p class="text font-thin max-w-[500px]">{blok.subheading}</p>
+            </div>
+        </div>
+    </div>
+</section>

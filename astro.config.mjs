@@ -48,6 +48,7 @@ export default defineConfig({
                 flex_list: 'storyblok/FlexList',
                 statistic: 'storyblok/Statistic',
                 accent_button: 'storyblok/AccentButton',
+                contact_form: 'storyblok/ContactForm',
             }
         }),
         icon()
