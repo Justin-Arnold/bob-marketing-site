@@ -1,0 +1,18 @@
+---
+import PageLayout from '../layouts/Page.astro'
+import { useStoryblokApi } from '@storyblok/astro'
+import StoryblokComponent from '@storyblok/astro/StoryblokComponent.astro'
+import '../styles/global.css'
+
+const storyblokApi = useStoryblokApi()
+
+const { data } = await storyblokApi.get("cdn/stories/contact", {
+    version: import.meta.env.DEV ? "draft" : "published",
+});
+
+const content = data.story.content;
+---
+
+<PageLayout>
+	<StoryblokComponent blok={content} />
+</PageLayout>
