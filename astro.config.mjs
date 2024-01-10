@@ -51,6 +51,7 @@ export default defineConfig({
                 accent_button: 'storyblok/AccentButton',
                 contact_form: 'storyblok/ContactForm',
                 post_body: 'storyblok/PostBody',
+                blog_post_list: 'storyblok/BlogPostList',
             }
         }),
         icon()

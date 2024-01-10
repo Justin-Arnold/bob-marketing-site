@@ -1,0 +1,22 @@
+---
+const { content, url } = Astro.props;
+
+console.log(content);
+---
+
+<div class="card w-96 bg-base-100 shadow-xl">
+    <figure class="h-48">
+        <img src={content.preview.filename}/>
+    </figure>
+    <div class="card-body">
+        <h3 class="card-title">
+            { content.title }
+        <h3>
+        <p>
+            { content.description}
+        </p>
+        <div class="card-actions justify-start mt-4">
+            <a href={url} class="link link-primary">read more</a>
+        </div>
+    </div>
+</div>
