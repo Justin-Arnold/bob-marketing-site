@@ -31,6 +31,7 @@ export default defineConfig({
             },
             components: {
                 page: 'storyblok/content/Page',
+                post: 'storyblok/content/Post',
                 hero: 'storyblok/hero',
                 siteHeader: 'storyblok/AppHeader',
                 siteHeaderMenu: 'storyblok/AppHeaderMenu',
@@ -49,6 +50,8 @@ export default defineConfig({
                 statistic: 'storyblok/Statistic',
                 accent_button: 'storyblok/AccentButton',
                 contact_form: 'storyblok/ContactForm',
+                post_body: 'storyblok/PostBody',
+                blog_post_list: 'storyblok/BlogPostList',
             }
         }),
         icon()

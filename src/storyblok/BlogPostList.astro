@@ -1,0 +1,35 @@
+---
+import { storyblokEditable, useStoryblokApi } from '@storyblok/astro'
+import PostCard from '../components/PostCard.astro'
+
+const { blok } = Astro.props
+
+const storyblokApi = useStoryblokApi()
+const { data } = await storyblokApi.get(`cdn/stories`, {
+    version: import.meta.env.DEV ? "draft" : "published",
+    starts_with: 'posts/',
+//   is_startpage: 0,
+})
+
+const articles = data.stories
+---
+
+<section class="mx-6 my-12" {...storyblokEditable(blok)}>
+    <h2 class="text-6xl text-primary font-bold text-center mb-12">
+        {blok.heading}
+    </h2>
+    <ul class="grid grid-cols-1 gap-6 md:grid-cols-3">
+        {
+        articles?.length &&
+            articles.map((article: any) => {
+            article.content.slug = article.slug
+            //   {console.log(0, article)}
+            return (
+                <li>
+                    <PostCard content={article.content.body[0]} url={article.path} />
+                </li>
+            )
+            })
+        }
+    </ul>
+</section>

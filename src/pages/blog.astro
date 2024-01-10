@@ -1,11 +1,12 @@
 ---
+import PageLayout from '../layouts/Page.astro'
 import { useStoryblokApi } from '@storyblok/astro'
 import StoryblokComponent from '@storyblok/astro/StoryblokComponent.astro'
-import PageLayout from '../layouts/Page.astro'
+import '../styles/global.css'
 
 const storyblokApi = useStoryblokApi()
 
-const { data } = await storyblokApi.get("cdn/stories/home", {
+const { data } = await storyblokApi.get("cdn/stories/blog", {
     version: import.meta.env.DEV ? "draft" : "published",
 });
 

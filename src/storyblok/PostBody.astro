@@ -1,0 +1,17 @@
+---
+import { storyblokEditable } from '@storyblok/astro'
+import { renderRichText } from "@storyblok/js";
+
+const { blok } = Astro.props
+
+const renderedRichText = renderRichText(blok.content);
+---
+
+<section {...storyblokEditable(blok)} class="text-center bg-base text-white p-10 flex flex-col items-center">
+    <div class="prose">
+        <h1>{blok.title}</h1>
+        <p>{blok.posted.split(" ")[0]}</p>
+        <img src={blok.preview.filename} />
+        <div set:html={renderedRichText}></div>
+    </div>
+</section>
