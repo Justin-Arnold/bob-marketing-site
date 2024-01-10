@@ -1,7 +1,7 @@
 ---
 import { useStoryblokApi } from '@storyblok/astro'
 import StoryblokComponent from '@storyblok/astro/StoryblokComponent.astro'
-import '../styles/global.css'
+import PageLayout from '../layouts/Page.astro'
 
 const storyblokApi = useStoryblokApi()
 
@@ -12,18 +12,6 @@ const { data } = await storyblokApi.get("cdn/stories/home", {
 const content = data.story.content;
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body class="min-h-screen bg-slate-800 h-full">
-        <!-- <div class="h-12 bg-white p-2 flex items-center">
-            <h1 class="text-3xl text-slate-800">Gradient for Buisness</h1>
-        </div> -->
-		<StoryblokComponent blok={content} />
-	</body>
-</html>
+<PageLayout>
+	<StoryblokComponent blok={content} />
+</PageLayout>

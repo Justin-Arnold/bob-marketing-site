@@ -1,11 +1,13 @@
 ---
 import Head from '../components/AppHead.astro'
 import '../styles/global.css'
+import BackgroundAnimation from '../components/BackgroundAnimation.astro'
 ---
 
 <html lang="en">
     <Head />
     <body class="min-h-screen bg-base-100">
+        <BackgroundAnimation />
         <slot />
     </body>
 </html>

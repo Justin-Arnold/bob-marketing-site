@@ -1,13 +1,11 @@
 ---
 import { storyblokEditable } from '@storyblok/astro'
 import StoryblokComponent from '@storyblok/astro/StoryblokComponent.astro'
-import BackgroundAnimation from '../../components/BackgroundAnimation.astro'
 
 const { blok } = Astro.props
 ---
 
 <main {...storyblokEditable(blok)} class="relative w-full h-fit flex flex-col justify-center items-center min-h-full">
-    <BackgroundAnimation />
     <div class="w-full z-[2] flex flex-col items-center min-h-screen">
         {
             blok.header?.map((blok: any) => {
