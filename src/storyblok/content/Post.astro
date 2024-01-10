@@ -1,0 +1,28 @@
+---
+import { storyblokEditable } from '@storyblok/astro'
+import StoryblokComponent from '@storyblok/astro/StoryblokComponent.astro'
+
+const { blok } = Astro.props
+---
+
+<main {...storyblokEditable(blok)} class="relative w-full h-fit flex flex-col justify-center items-center min-h-full">
+    <div class="w-full z-[2] flex flex-col items-center min-h-screen">
+        {
+            blok.header?.map((blok: any) => {
+                return <StoryblokComponent blok={blok} />
+            })
+        }
+        <div class="wrapper flex flex-col w-full">
+            {
+                blok.body?.map((blok: any) => {
+                    return <StoryblokComponent blok={blok} />
+                })
+            }
+        </div>
+        {
+            blok.footer?.map((blok: any) => {
+                return <StoryblokComponent blok={blok} />
+            })
+        }
+    </div>
+</main>
