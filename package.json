@@ -21,6 +21,7 @@
     "typescript": "^5.3.3"
   },
   "devDependencies": {
+    "@iconify-json/mdi": "^1.1.64",
     "@iconify/json": "^2.2.162",
     "@tailwindcss/typography": "^0.5.10",
     "@vitejs/plugin-basic-ssl": "^1.0.2"
