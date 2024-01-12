@@ -52,6 +52,8 @@ export default defineConfig({
                 contact_form: 'storyblok/ContactForm',
                 post_body: 'storyblok/PostBody',
                 blog_post_list: 'storyblok/BlogPostList',
+                carousel: 'storyblok/Carousel',
+                testimonial_card:'storyblok/TestimonialCard',
             }
         }),
         icon()
