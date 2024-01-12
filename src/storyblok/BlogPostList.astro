@@ -23,7 +23,6 @@ const articles = data.stories
         articles?.length &&
             articles.map((article: any) => {
             article.content.slug = article.slug
-            //   {console.log(0, article)}
             return (
                 <li>
                     <PostCard content={article.content.body[0]} url={article.path} />
