@@ -9,10 +9,9 @@ function getIconString(name: string) {
 }
 ---
 <section {...storyblokEditable(blok)} class="card bg-base-100 shadow-xl w-96">
-    <div class="card-body text-neutral">
+    <div class="card-body text-neutral content">
         <Icon name={blok.icon} class="text-5xl"/>
-        <!-- {getIconString(blok.icon)} -->
-        <h1 class="card-title">{blok.heading}</h1>
-        <p class="text font-thin max-w-[500px]">{blok.subtext}</p>
+        <h4 class="card-title">{blok.heading}</h4>
+        <p class="max-w-[500px]">{blok.subtext}</p>
     </div>
 </section>

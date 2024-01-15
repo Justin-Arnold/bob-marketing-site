@@ -5,6 +5,13 @@ import StoryblokComponent from '@storyblok/astro/StoryblokComponent.astro'
 const { blok } = Astro.props
 ---
 
+<script>
+    import AOS from 'aos'
+    import 'aos/dist/aos.css'
+
+    AOS.init()
+</script>
+
 <main {...storyblokEditable(blok)} class="relative w-full h-fit flex flex-col justify-center items-center min-h-full">
     <div class="w-full z-[2] flex flex-col items-center min-h-screen">
         {
@@ -12,7 +19,7 @@ const { blok } = Astro.props
                 return <StoryblokComponent blok={blok} />
             })
         }
-        <div class="wrapper flex flex-col w-full">
+        <div class="wrapper flex flex-col w-full gap-16">
             {
                 blok.body?.map((blok: any) => {
                     return <StoryblokComponent blok={blok} />
