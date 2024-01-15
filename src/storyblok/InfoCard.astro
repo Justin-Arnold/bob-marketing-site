@@ -3,10 +3,6 @@ import { storyblokEditable } from '@storyblok/astro'
 import { Icon } from 'astro-icon/components';
 
 const { blok } = Astro.props
-
-function getIconString(name: string) {
-    return `icon-` + `[mdi--${name}]`
-}
 ---
 <section {...storyblokEditable(blok)} class="card bg-base-100 shadow-xl w-96">
     <div class="card-body text-neutral content">
