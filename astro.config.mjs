@@ -2,7 +2,7 @@ import { defineConfig } from 'astro/config';
 import tailwind from "@astrojs/tailwind";
 import storyblok from "@storyblok/astro";
 import basicSsl from '@vitejs/plugin-basic-ssl';
-
+import tailwindcssNesting from 'tailwindcss/nesting'
 import icon from "astro-icon";
 import { squooshImageService } from "astro/config";
 
@@ -11,7 +11,12 @@ export default defineConfig({
     vite: {
         plugins: [basicSsl()],
         server: {
-        https: true
+            https: true
+        },
+        css: {
+            postcss: {
+                plugins: [tailwindcssNesting()]
+            }
         }
     },
     redirects: {
@@ -22,8 +27,7 @@ export default defineConfig({
     },
     integrations: [
         tailwind({
-            applyBaseStyles: false,
-            nesting: true
+            applyBaseStyles: false
         }),
         storyblok({
             accessToken: process.env.STORYBLOK_TOKEN,
