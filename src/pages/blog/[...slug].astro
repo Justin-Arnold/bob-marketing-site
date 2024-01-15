@@ -29,7 +29,6 @@ const { data } = await sbApi.get(`cdn/stories/posts/${slug}`, {
 });
 
 const story = data.story;
-// console.log('sc', story.content)
 ---
 <PageLayout>
 	<StoryblokComponent blok={story.content} />

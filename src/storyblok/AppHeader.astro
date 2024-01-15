@@ -5,21 +5,19 @@ import StoryblokComponent from '@storyblok/astro/StoryblokComponent.astro'
 const { blok } = Astro.props
 ---
 
-<div {...storyblokEditable(blok)} class="h-12 bg-neutral flex justify-center w-full">
-    <div class="flex items-center justify-between w-full max-w-[1000px]">
-        <div>
-            {
-                blok.leftSide.map((subBlok: any) => {
-                    return <StoryblokComponent blok={subBlok} />
-                })
-            }
-        </div>
-        <div>
-            {
-                blok.rightSide.map((subBlok: any) => {
-                    return <StoryblokComponent blok={subBlok} />
-                })
-            }
-        </div>
+<div {...storyblokEditable(blok)} class="navbar bg-base-100 justify-center">
+    <div class="navbar-start max-w-[500px]">
+        {
+            blok.leftSide.map((subBlok: any) => {
+                return <StoryblokComponent blok={subBlok} />
+            })
+        }
+    </div>
+    <div class="navbar-end max-w-[500px]">
+        {
+            blok.rightSide.map((subBlok: any) => {
+                return <StoryblokComponent blok={subBlok} />
+            })
+        }
     </div>
 </div>

@@ -5,78 +5,92 @@ import SocialsBar from '../components/SocialsBar.astro'
 const { blok } = Astro.props
 ---
 
-<section {...storyblokEditable(blok)} class="w-full">
-    <div class="card bg-neutral w-full max-w-[700px] h-[400px] mx-auto overflow-clip">
-        <div class="flex w-full h-full">
-            <div class="bg-primary card-body">
-                <div>
-                    <h1 class="text-2xl text-white">{blok.heading}</h1>
-                    <p class="">{blok.subheading}</p>
-                </div>
-                <div class="grow">
-                    <span class="flex items-center gap-2">
-                        <i class="icon-[mdi--phone]" />
-                        <p class="text-white">{blok.phone_number}</p>
-                    </span>
-                    <span class="flex items-center gap-2">
-                        <i class="icon-[mdi--mail]" />
-                        <p class="text-white">{blok.email}</p>
-                    </span>
-                </div>
-                <SocialsBar />
+<div {...storyblokEditable(blok)} class="card bg-base-100 max-w-[800px] mx-auto overflow-clip">
+    <div class="flex w-full h-full">
+        <div class="bg-base-300 card-body max-w-[300px] content gap-4">
+            <div>
+                <h3>{blok.heading}</h3>
+                <p class="sub-3">{blok.subheading}</p>
             </div>
-            <div class="card-body">
-                <form class="flex flex-col gap-6">
+            <div class="grow">
+                <span class="flex items-center gap-2">
+                    <i class="icon-[mdi--phone] text-secondary" />
+                    <p class="font-semibold">{blok.phone_number}</p>
+                </span>
+                <span class="flex items-center gap-2">
+                    <i class="icon-[mdi--mail] text-secondary" />
+                    <p class="font-semibold">{blok.email}</p>
+                </span>
+            </div>
+            <SocialsBar />
+        </div>
+        <div class="card-body">
+            <form class="flex flex-col gap-6">
+                <div class="flex gap-4">
+                    <label class="form-control w-full max-w-xs">
+                        <div class="label">
+                            <span class="label-text">First Name</span>
+                        </div>
+                        <input type="text" placeholder="Type here" class="input input-bordered w-full max-w-xs" />
+                    </label>
+                    <label class="form-control w-full max-w-xs">
+                        <div class="label">
+                            <span class="label-text">Last Name</span>
+                        </div>
+                        <input type="text" placeholder="Type here" class="input input-bordered w-full max-w-xs" />
+                    </label>
+                </div>
+                <div class="flex gap-4">
+                    <label class="form-control w-full max-w-xs">
+                        <div class="label">
+                            <span class="label-text">Email</span>
+                        </div>
+                        <input type="text" placeholder="Type here" class="input input-bordered w-full max-w-xs" />
+                    </label>
+                    <label class="form-control w-full max-w-xs">
+                        <div class="label">
+                            <span class="label-text">Phone Number</span>
+                        </div>
+                        <input type="text" placeholder="Type here" class="input input-bordered w-full max-w-xs" />
+                    </label>
+                </div>
+                <div class="flex flex-col">
+                    <label for="amount" class="label">How many people work at your company?</label>
                     <div class="flex gap-2">
-                        <span>
-                            <label for="fname">First Name</label>
-                            <input type="text" id="fname" />
-                        </span>
-                        <span>
-                            <label for="lname">Last Name</label>
-                            <input type="text" id="lname" />
-                        </span>
-                    </div>
-                    <div class="flex gap-2">
-                        <span>
-                            <label for="email">Email</label>
-                            <input type="text" id="email" />
-                        </span>
-                        <span>
-                            <label for="number">Phone Number</label>
-                            <input type="text" id="number" />
-                        </span>
-                    </div>
-                    <div class="flex flex-col">
-                        <label for="amount">How many people work at your company?</label>
-                        <div class="flex gap-2">
-                            <span>
-                                <input type="radio" id="1-10" name="amount" />
-                                <label for="1-10">1-10</label>
-                            </span>
-                            <span>
-                                <input type="radio" id="11-50" name="amount" />
-                                <label for="11-50">11-100</label>
-                            </span>
-                            <span>
-                                <input type="radio" id="51-200" name="amount" />
-                                <label for="51-200">100-500</label>
-                            </span>
-                            <span>
-                                <input type="radio" id="201-500" name="amount" />
-                                <label for="201-500">500+</label>
-                            </span>
+                        <div class="form-control">
+                            <label class="label cursor-pointer">
+                                <span class="label-text">1 - 10</span>
+                                <input type="radio" name="radio-10" class="radio checked:bg-primary" checked />
+                            </label>
+                        </div>
+                        <div class="form-control">
+                            <label class="label cursor-pointer">
+                                <span class="label-text">11 - 100</span>
+                                <input type="radio" name="radio-10" class="radio checked:bg-primary" checked />
+                            </label>
+                        </div>
+                        <div class="form-control">
+                            <label class="label cursor-pointer">
+                                <span class="label-text">101 - 500</span>
+                                <input type="radio" name="radio-10" class="radio checked:bg-primary" checked />
+                            </label>
+                        </div>
+                        <div class="form-control">
+                            <label class="label cursor-pointer">
+                                <span class="label-text">500+</span>
+                                <input type="radio" name="radio-10" class="radio checked:bg-primary" checked />
+                            </label>
                         </div>
                     </div>
-                    <div class="flex flex-col">
-                        <label for="message">Message</label>
-                        <textarea id="message" />
+                </div>
+                <label class="form-control">
+                    <div class="label">
+                        <span class="label-text">Message</span>
                     </div>
-                    <!-- <div class="flex justify-end"> -->
-                        <button class="btn btn-primary">Submit</button>
-                    <!-- </div> -->
-                </form>
-            </div>
+                    <textarea class="textarea textarea-bordered h-24" placeholder="Type Here"></textarea>
+                </label>
+                <button class="btn btn-primary">Submit</button>
+            </form>
         </div>
     </div>
-</section>
+</div>

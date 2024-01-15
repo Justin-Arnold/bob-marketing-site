@@ -1,29 +1,39 @@
 ---
 import { storyblokEditable } from '@storyblok/astro'
+import CostAnimation from '../components/CostAnimation.astro'
 
 const { blok } = Astro.props
 ---
 
-<section {...storyblokEditable(blok)} class={
-    blok.isPrimary ? "card bg-black text-white shadow-xl w-96 scale-110" : "card text-base-100 bg-neutral shadow-xl w-96"
-}>
-    <div class="card-body">
-        <h3 class="text-lg">{blok.name}</h3>
-        <p class="text-sm font-thin max-w-[500px]">{blok.description}</p>
-        <p class="font-light">
-            <span class="font-semibold text-2xl">
-                ${blok.cost_amount}
-            </span>
-            /{blok.cost_frequency}
-        </p>
-        <button class="btn btn-primary btn-outline">
-            {blok.call_to_action}
-        </button>
-        <p>{blok.feature_title}</p>
-        <ul class="list-disc list-inside font-light">
-            {blok.features.split(',').map((feature: any) => (
-                <li>{feature}</li>
-            ))}
-        </ul>
+<section {...storyblokEditable(blok)} class="flex justify-center">
+    <div class="card text-neutral bg-base-100 shadow-xl w-[600px]">
+        <div class="card-body relative">
+            <div class="absolute h-[400px]">
+                <CostAnimation />
+            </div>
+            <div class="h-[400px]">
+                <div>
+                    <p class="text-center">
+                        <span class="font-semibold text-[100px] text-primary">
+                            ${blok.cost_amount}
+                        </span>
+                        <span class="text-5xl font-thin">
+                            {blok.cost_frequency}
+                        </span>
+                    </p>
+                </div>
+            </div>
+            <h3 class="text-lg">{blok.name}</h3>
+            <p class="text-sm font-thin max-w-[500px]">{blok.description}</p>
+            <button class="btn btn-primary btn-outline">
+                {blok.call_to_action}
+            </button>
+            <p>{blok.feature_title}</p>
+            <ul class="list-disc list-inside font-light">
+                {blok.features.split(',').map((feature: any) => (
+                    <li>{feature}</li>
+                ))}
+            </ul>
+        </div>
     </div>
 </section>

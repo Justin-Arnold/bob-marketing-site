@@ -5,14 +5,18 @@ import StoryblokComponent from '@storyblok/astro/StoryblokComponent.astro'
 const { blok } = Astro.props
 ---
 
-<div {...storyblokEditable(blok)} class="flex items-center gap-4 justify-center ">
-    <div class="flex gap-2">
+<div {...storyblokEditable(blok)} class="flex items-center gap-4 justify-center">
+    <ul class="menu menu-horizontal">
         {
             blok.secondaryItems.map((subBlok: any) => {
-                return <StoryblokComponent blok={subBlok} />
+                return (
+                    <li>
+                        <StoryblokComponent blok={subBlok} />
+                    </li>
+                )
             })
         }
-    </div>
+    </ul>
     <div>
         {
             blok.primaryItems.map((subBlok: any) => {
