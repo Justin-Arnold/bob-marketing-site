@@ -7,21 +7,19 @@ const { blok } = Astro.props
 
 <section {...storyblokEditable(blok)} class="flex justify-center">
     <div class="card text-neutral bg-base-100 shadow-xl w-[600px]">
-        <div class="card-body relative">
-            <div class="absolute h-[400px]">
+        <div class="card-body relative overflow-clip">
+            <div class="absolute left-0 top-0 w-full h-[300px] sm:h-[400px] px-4 flex items-end">
                 <CostAnimation />
             </div>
-            <div class="h-[400px]">
-                <div>
-                    <p class="text-center">
-                        <span class="font-semibold text-[100px] text-primary">
-                            ${blok.cost_amount}
-                        </span>
-                        <span class="text-5xl font-thin">
-                            {blok.cost_frequency}
-                        </span>
-                    </p>
-                </div>
+            <div class="h-[300px] sm:h-[400px]">
+                <p class="text-center">
+                    <span class="font-semibold text-[70px] sm:text-[100px] text-primary">
+                        ${blok.cost_amount}
+                    </span>
+                    <span class="text-5xl font-thin">
+                        {blok.cost_frequency}
+                    </span>
+                </p>
             </div>
             <h3 class="text-lg">{blok.name}</h3>
             <p class="text-sm font-thin max-w-[500px]">{blok.description}</p>
