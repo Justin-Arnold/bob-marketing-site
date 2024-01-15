@@ -1,0 +1,11 @@
+---
+import { storyblokEditable } from '@storyblok/astro'
+
+const { blok } = Astro.props
+---
+
+<a href={blok.url.cached_url ?? blok.url.url}>
+    <button class="w-full md:btn md:btn-primary md:btn-sm">
+        { blok.title }
+    </button>
+</a>

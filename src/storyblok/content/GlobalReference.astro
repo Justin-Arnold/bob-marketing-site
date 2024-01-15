@@ -1,0 +1,11 @@
+---
+import StoryblokComponent from '@storyblok/astro/StoryblokComponent.astro'
+
+const { blok } = Astro.props
+---
+
+{
+    blok.reference.content.global.map((blok: any) => {
+        return <StoryblokComponent blok={blok} />
+    })
+}

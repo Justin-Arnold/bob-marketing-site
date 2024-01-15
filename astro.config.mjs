@@ -56,6 +56,9 @@ export default defineConfig({
                 carousel: 'storyblok/Carousel',
                 testimonial_card:'storyblok/TestimonialCard',
                 page_section: 'storyblok/PageSection',
+                global_reference: 'storyblok/content/GlobalReference',
+                menu_item_nav: 'storyblok/blocks/menu_items/NavItem',
+                menu_item_action: 'storyblok/blocks/menu_items/ActionItem',
             }
         }),
         icon()
