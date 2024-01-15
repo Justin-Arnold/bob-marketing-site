@@ -18,4 +18,31 @@
         width: 100%;
         grid-column: 1 / 4;
     }
+
+    /*
+    Similar to tailwind prose, this is a utility class for typography,
+    However, it is intended to be used with non-article content, such as
+    the content of a page's header or footer.
+    */
+    .content {
+
+        h2 {
+            @apply text-4xl font-bold leading-relaxed;
+        }
+
+        h3 {
+            @apply text-2xl font-bold leading-relaxed;
+        }
+
+        p {
+            @apply text-base;
+
+            &.sub-2 {
+                @apply text-lg;
+            }
+            &.sub-3 {
+                @apply text-sm;
+            }
+        }
+    }
 }

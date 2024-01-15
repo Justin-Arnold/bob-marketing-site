@@ -23,6 +23,7 @@ export default defineConfig({
     integrations: [
         tailwind({
             applyBaseStyles: false,
+            nesting: true
         }),
         storyblok({
             accessToken: process.env.STORYBLOK_TOKEN,
@@ -54,6 +55,7 @@ export default defineConfig({
                 blog_post_list: 'storyblok/BlogPostList',
                 carousel: 'storyblok/Carousel',
                 testimonial_card:'storyblok/TestimonialCard',
+                page_section: 'storyblok/PageSection',
             }
         }),
         icon()

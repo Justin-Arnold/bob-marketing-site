@@ -1,0 +1,10 @@
+---
+import { storyblokEditable } from '@storyblok/astro'
+import StoryblokComponent from '@storyblok/astro/StoryblokComponent.astro'
+
+const { blok } = Astro.props
+---
+
+<section {...storyblokEditable(blok)} class="flex flex-col gap-4 py-8">
+    { blok.items.map((subBlok: any) => <StoryblokComponent blok={subBlok} /> )}
+</section>

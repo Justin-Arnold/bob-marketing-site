@@ -4,7 +4,7 @@ import { storyblokEditable } from '@storyblok/astro'
 const { blok } = Astro.props
 ---
 
-<section {...storyblokEditable(blok)} class="text-center bg-base text-white py-20 flex flex-col items-center">
-    <h1 class="text-5xl mb-4 text-neutral max-w-[500px]">{blok.heading}</h1>
-    <p class="text font-thin text-neutral max-w-[500px]">{blok.subText}</p>
-</section>
+<div {...storyblokEditable(blok)} class="text-center content">
+    <h2>{blok.heading}</h1>
+    <p class="sub-2">{blok.subText}</p>
+</div>
