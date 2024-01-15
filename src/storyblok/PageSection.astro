@@ -4,7 +4,7 @@ import StoryblokComponent from '@storyblok/astro/StoryblokComponent.astro'
 
 const { blok } = Astro.props
 ---
-
-<section {...storyblokEditable(blok)} data-aos="fade-up" data-aos-duration="2000" data-aos-offset="400" data-aos-mirror="true" class="flex flex-col gap-4 py-8">
+<!-- data-aos="fade-up" data-aos-duration="200" data-aos-offset="400" data-aos-mirror="true" -->
+<section {...storyblokEditable(blok)}  class="flex flex-col gap-4 py-8">
     { blok.items.map((subBlok: any) => <StoryblokComponent blok={subBlok} /> )}
 </section>
