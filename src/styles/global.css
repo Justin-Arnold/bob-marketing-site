@@ -19,6 +19,11 @@
         grid-column: 1 / 4;
     }
 
+    .no-bleed {
+        width: 100%;
+        grid-column: 2;
+    }
+
     /*
     Similar to tailwind prose, this is a utility class for typography,
     However, it is intended to be used with non-article content, such as

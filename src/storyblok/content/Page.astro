@@ -19,14 +19,12 @@ const { blok } = Astro.props
                 return <StoryblokComponent blok={blok} />
             })
         }
-        <div class="wrapper w-full">
-            <div class="flex flex-col gap-16">
-                {
-                    blok.body?.map((blok: any) => {
-                        return <StoryblokComponent blok={blok} />
-                    })
-                }
-            </div>
+        <div class="w-full flex flex-col gap-16">
+            {
+                blok.body?.map((blok: any) => {
+                    return <StoryblokComponent blok={blok} />
+                })
+            }
         </div>
         {
             blok.footer?.map((blok: any) => {
