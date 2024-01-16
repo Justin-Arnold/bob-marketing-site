@@ -1,0 +1,23 @@
+---
+import PostCard from '../components/PostCard.astro'
+import { storyblokEditable } from '@storyblok/astro'
+
+const { blok } = Astro.props
+---
+
+<div class="mx-6 my-12" {...storyblokEditable(blok)}>
+    <h2 class="text-6xl text-primary font-bold text-center mb-12">
+        {blok.heading}
+    </h2>
+    <ul class="grid grid-cols-1 gap-6 md:grid-cols-3">
+        { blok.posts.map((article: any) => {
+            article.content.slug = article.slug
+            return (
+                <li>
+                    <PostCard content={article.content.body[0]} url={article.path} />
+                </li>
+            )
+            })
+        }
+    </ul>
+</div>

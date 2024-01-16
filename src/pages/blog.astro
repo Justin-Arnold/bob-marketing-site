@@ -8,6 +8,10 @@ const storyblokApi = useStoryblokApi()
 
 const { data } = await storyblokApi.get("cdn/stories/blog", {
     version: import.meta.env.DEV ? "draft" : "published",
+    resolve_relations: [
+        'global_reference.reference',
+        'featured_blog_post_list.posts'
+    ]
 });
 
 const content = data.story.content;
