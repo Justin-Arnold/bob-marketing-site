@@ -1,17 +1,8 @@
 ---
-import { storyblokEditable, useStoryblokApi } from '@storyblok/astro'
 import PostCard from '../components/PostCard.astro'
+import { storyblokEditable } from '@storyblok/astro'
 
 const { blok } = Astro.props
-
-const storyblokApi = useStoryblokApi()
-const { data } = await storyblokApi.get(`cdn/stories`, {
-    version: import.meta.env.DEV ? "draft" : "published",
-    starts_with: 'posts/',
-//   is_startpage: 0,
-})
-
-const articles = data.stories
 ---
 
 <div {...storyblokEditable(blok)}>
@@ -19,9 +10,7 @@ const articles = data.stories
         {blok.heading}
     </h2>
     <ul class="grid grid-cols-1 gap-6 md:grid-cols-3">
-        {
-        articles?.length &&
-            articles.map((article: any) => {
+        { blok.posts.map((article: any) => {
             article.content.slug = article.slug
             return (
                 <li>

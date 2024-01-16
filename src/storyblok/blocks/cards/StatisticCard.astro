@@ -1,0 +1,16 @@
+---
+import { storyblokEditable } from '@storyblok/astro'
+
+const { blok } = Astro.props
+---
+
+<div {...storyblokEditable(blok)} class="card bg-base-100">
+   <div class="flex flex-col  py-8 items-center justify-center">
+       <p class="text-primary text-5xl font-bold">
+        {blok.quantity}
+       </p>
+       <h4 class="text-xl text-semibold text-center">
+        {blok.title}
+       </h4>
+   </div>
+</div>

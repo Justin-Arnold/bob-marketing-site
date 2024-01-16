@@ -3,15 +3,15 @@ const { content, url } = Astro.props;
 
 ---
 
-<div class="card w-96 bg-base-100 shadow-xl">
-    <figure class="h-48">
+<div class="card bg-base-100 shadow-xl h-[500px]">
+    <figure class="h-48 shrink-0">
         <img src={content.preview.filename}/>
     </figure>
     <div class="card-body">
         <h3 class="card-title">
             { content.title }
         <h3>
-        <p>
+        <p class="line-clamp-3 overflow-hidden overflow-ellipsis">
             { content.description}
         </p>
         <div class="card-actions justify-start mt-4">
