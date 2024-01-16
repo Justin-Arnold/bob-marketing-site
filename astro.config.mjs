@@ -2,7 +2,7 @@ import { defineConfig } from 'astro/config';
 import tailwind from "@astrojs/tailwind";
 import storyblok from "@storyblok/astro";
 import basicSsl from '@vitejs/plugin-basic-ssl';
-
+import tailwindcssNesting from 'tailwindcss/nesting'
 import icon from "astro-icon";
 import { squooshImageService } from "astro/config";
 
@@ -11,7 +11,12 @@ export default defineConfig({
     vite: {
         plugins: [basicSsl()],
         server: {
-        https: true
+            https: true
+        },
+        css: {
+            postcss: {
+                plugins: [tailwindcssNesting()]
+            }
         }
     },
     redirects: {
@@ -22,8 +27,7 @@ export default defineConfig({
     },
     integrations: [
         tailwind({
-            applyBaseStyles: false,
-            nesting: true
+            applyBaseStyles: false
         }),
         storyblok({
             accessToken: process.env.STORYBLOK_TOKEN,
@@ -33,7 +37,7 @@ export default defineConfig({
             components: {
                 page: 'storyblok/content/Page',
                 post: 'storyblok/content/Post',
-                hero: 'storyblok/hero',
+                hero: 'storyblok//blocks/hero/NoBleed',
                 siteHeader: 'storyblok/AppHeader',
                 siteHeaderMenu: 'storyblok/AppHeaderMenu',
                 logoAndName: 'storyblok/AppLogo',
@@ -46,7 +50,7 @@ export default defineConfig({
                 pricing_card: 'storyblok/PricingCard',
                 horizontal_stack: 'storyblok/HorizontalStack',
                 full_bleed_hero: 'storyblok/blocks/hero/FullBleed',
-                personnel_card: 'storyblok/PersonnelCard',
+                personnel_card: 'storyblok/blocks/cards/PersonnelCard',
                 flex_list: 'storyblok/FlexList',
                 statistic: 'storyblok/Statistic',
                 accent_button: 'storyblok/AccentButton',
@@ -56,6 +60,11 @@ export default defineConfig({
                 carousel: 'storyblok/Carousel',
                 testimonial_card:'storyblok/TestimonialCard',
                 page_section: 'storyblok/PageSection',
+                global_reference: 'storyblok/content/GlobalReference',
+                menu_item_nav: 'storyblok/blocks/menu_items/NavItem',
+                menu_item_action: 'storyblok/blocks/menu_items/ActionItem',
+                text_content: 'storyblok/TextContent',
+                personnel_card_grid: 'storyblok/PersonnelCardGrid',
             }
         }),
         icon()

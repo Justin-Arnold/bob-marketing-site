@@ -19,12 +19,21 @@
         grid-column: 1 / 4;
     }
 
+    .no-bleed {
+        width: 100%;
+        grid-column: 2;
+    }
+
     /*
     Similar to tailwind prose, this is a utility class for typography,
     However, it is intended to be used with non-article content, such as
     the content of a page's header or footer.
     */
     .content {
+
+        h1 {
+            @apply text-3xl sm:text-5xl font-semibold leading-[110%] ;
+        }
 
         h2 {
             @apply text-4xl font-bold leading-relaxed;
@@ -38,7 +47,7 @@
             @apply text-base;
 
             &.sub-2 {
-                @apply text-lg;
+                @apply sm:text-lg font-light;
             }
             &.sub-3 {
                 @apply text-sm;

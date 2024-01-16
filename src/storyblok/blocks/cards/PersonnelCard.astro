@@ -4,7 +4,7 @@ import { storyblokEditable } from '@storyblok/astro'
 const { blok } = Astro.props
 ---
 
-<section {...storyblokEditable(blok)} class="card bg-neutral shadow-xl w-60 h-[300px]">
+<section {...storyblokEditable(blok)} class="card bg-neutral shadow-xl max-w-60 w-60 h-[300px]">
     <div class="card-body text-base-100">
         <img src={blok.picture.filename} class="w-32 h-32 rounded-full mx-auto mb-4" />
         <h3 class="text-xl font-extrabold">{blok.name}</h3>

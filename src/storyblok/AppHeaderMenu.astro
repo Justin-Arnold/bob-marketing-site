@@ -1,27 +1,41 @@
 ---
 import { storyblokEditable } from '@storyblok/astro'
 import StoryblokComponent from '@storyblok/astro/StoryblokComponent.astro'
+import { Icon } from 'astro-icon/components'
 
 const { blok } = Astro.props
 ---
 
-<div {...storyblokEditable(blok)} class="flex items-center gap-4 justify-center">
-    <ul class="menu menu-horizontal">
-        {
-            blok.secondaryItems.map((subBlok: any) => {
-                return (
-                    <li>
-                        <StoryblokComponent blok={subBlok} />
-                    </li>
-                )
-            })
-        }
-    </ul>
-    <div>
-        {
-            blok.primaryItems.map((subBlok: any) => {
-                return <StoryblokComponent blok={subBlok} />
-            })
-        }
-    </div>
-</span>
+<div {...storyblokEditable(blok)}>
+    <!-- Desktop + Tablet Menu -->
+    <span class="hidden md:block">
+        <ul class="menu menu-horizontal items-center flex-nowrap">
+            {
+                blok.items.map((subBlok: any) => {
+                    return (
+                        <li>
+                            <StoryblokComponent blok={subBlok} />
+                        </li>
+                    )
+                })
+            }
+        </ul>
+    </span>
+    <!-- Mobile Menu -->
+    <details class="md:hidden dropdown dropdown-bottom">
+        <summary class="btn m-1">
+            <Icon class="text-4xl" name="mdi:menu" />
+        </summary>
+        <ul class="-right-2 dropdown-content z-[1] menu p-4 shadow bg-base-100 w-screen items-end">
+            {
+                blok.items.map((subBlok: any) => {
+                    return (
+                        <li class="w-full items-end !text-xl">
+                            <StoryblokComponent blok={subBlok} />
+                        </li>
+                    )
+                })
+            }
+        </ul>
+    </details>
+</div>

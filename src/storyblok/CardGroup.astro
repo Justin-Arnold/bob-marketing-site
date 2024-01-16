@@ -5,10 +5,16 @@ import StoryblokComponent from '@storyblok/astro/StoryblokComponent.astro'
 const { blok } = Astro.props
 ---
 
-<div {...storyblokEditable(blok)} class="flex gap-8">
+<div {...storyblokEditable(blok)} class="flex gap-8 flex-wrap card-group-container">
     {
         blok.cards.map((blok: any) => {
             return <StoryblokComponent blok={blok} />
         })
     }
 </span>
+
+<style>
+:global(.card-group-container > *){
+    @apply !flex-1
+}
+</style>

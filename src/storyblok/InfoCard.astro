@@ -4,10 +4,10 @@ import { Icon } from 'astro-icon/components';
 
 const { blok } = Astro.props
 ---
-<section {...storyblokEditable(blok)} class="card bg-base-100 shadow-xl w-96">
+<div {...storyblokEditable(blok)} class="card bg-base-100 shadow-xl min-w-48">
     <div class="card-body text-neutral content">
         <Icon name={blok.icon} class="text-5xl"/>
         <h4 class="card-title">{blok.heading}</h4>
         <p class="max-w-[500px]">{blok.subtext}</p>
     </div>
-</section>
+</div>
