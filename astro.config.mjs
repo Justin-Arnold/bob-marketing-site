@@ -63,6 +63,7 @@ export default defineConfig({
                 global_reference: 'storyblok/content/GlobalReference',
                 menu_item_nav: 'storyblok/blocks/menu_items/NavItem',
                 menu_item_action: 'storyblok/blocks/menu_items/ActionItem',
+                text_content: 'storyblok/TextContent',
             }
         }),
         icon()
