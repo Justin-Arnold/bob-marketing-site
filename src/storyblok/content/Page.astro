@@ -5,27 +5,6 @@ import StoryblokComponent from '@storyblok/astro/StoryblokComponent.astro'
 const { blok } = Astro.props
 ---
 
-<script>
-    import AOS from 'aos'
-    import 'aos/dist/aos.css'
-
-    const sections = document.querySelectorAll('section');
-    let first = true;
-
-    sections.forEach(section => {
-        if (first) {
-            first = false;
-            return;
-        }
-        section.setAttribute('data-aos', 'fade-up');
-        section.setAttribute('data-aos-duration', '1000');
-        section.setAttribute('data-aos-offset', '100');
-        section.setAttribute('data-aos-mirror', 'true');
-    });
-
-    AOS.init()
-</script>
-
 <main {...storyblokEditable(blok)} class="relative w-full h-fit flex flex-col justify-center items-center min-h-full">
     <div class="w-full z-[2] flex flex-col items-center min-h-screen">
         {
