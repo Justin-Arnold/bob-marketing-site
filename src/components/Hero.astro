@@ -1,0 +1,22 @@
+<div class="hero py-20">
+    <div class="content hero-content flex-col items-start md:flex-row md:items-center">
+        <!-- Banner Header -->
+        <div class="flex flex-col items-start gap-2 relative max-w-[500px]">
+            <div class="absolute -top-8">
+                <slot name="pre-heading" />
+            </div>
+            <h1>
+                <slot name="heading" />
+            </h1>
+        </div>
+        <!-- Banner Subtext & CTA -->
+        <div class="flex flex-col gap-4 text-left">
+            <p class="sub-2">
+                <slot name="subtext" />
+            </p>
+            <span class="w-full">
+                <slot name="call-to-action" />
+            </span>
+        </div>
+    </div>
+</div>

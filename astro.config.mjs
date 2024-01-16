@@ -37,7 +37,7 @@ export default defineConfig({
             components: {
                 page: 'storyblok/content/Page',
                 post: 'storyblok/content/Post',
-                hero: 'storyblok/hero',
+                hero: 'storyblok//blocks/hero/NoBleed',
                 siteHeader: 'storyblok/AppHeader',
                 siteHeaderMenu: 'storyblok/AppHeaderMenu',
                 logoAndName: 'storyblok/AppLogo',

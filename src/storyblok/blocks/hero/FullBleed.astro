@@ -1,23 +1,28 @@
 ---
 import { storyblokEditable } from '@storyblok/astro'
+import Hero from '../../../components/Hero.astro'
 
 const { blok } = Astro.props
 ---
 
-<section {...storyblokEditable(blok)} class="full-bleed relative">
-    <div class="brightness-[30%]">
-        <img src={blok.background.filename} alt="UI Image" />
+<div {...storyblokEditable(blok)} class="full-bleed relative max-h-[600px]">
+    <div class="brightness-[20%] h-full overflow-hidden">
+        <img src={blok.background.filename} alt="UI Image" class="object-cover object-top w-full h-full"/>
     </div>
-    <div class="absolute top-20 left-0 w-full wrapper">
-        <div class="flex gap-8 items-center">
-            <div class="w-[500px] shrink-0">
-                <p class="text-primary text-2xl">{blok.heading_super}</p>
-                <h2 class="text-[60px] font-semibold leading-tight">{blok.heading}</h2>
-            </div>
-            <div class="flex flex-col gap-4">
-                <p class="text-xl">{blok.body}</p>
-                <button class="btn btn-primary w-fit">{blok.call_to_action}</button>
-            </div>
-        </div>
+    <div class="absolute top-0 left-0 w-full wrapper">
+        <Hero>
+            <p class="text-primary !sub-2" slot="pre-heading">
+                {blok.heading_super}
+            </p>
+            <span slot="heading">
+                {blok.heading}
+            </span>
+            <span slot="subtext">
+                {blok.body}
+            </span>
+            <button class="btn btn-primary w-fit" slot="call-to-action">
+                {blok.call_to_action}
+            </button>
+        </Hero>
     </div>
-</section>
+</div>

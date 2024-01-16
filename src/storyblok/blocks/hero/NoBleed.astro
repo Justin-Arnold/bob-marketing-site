@@ -1,0 +1,30 @@
+---
+import { storyblokEditable } from '@storyblok/astro'
+import StoryblokComponent from '@storyblok/astro/StoryblokComponent.astro'
+import Hero from '../../../components/Hero.astro'
+
+const { blok } = Astro.props
+---
+<Hero>
+    <span slot="pre-heading">
+        {
+            blok.preheading?.map((subBlok: any) => {
+                return <StoryblokComponent blok={subBlok} />
+            })
+        }
+    </span>
+    <span slot="heading">
+        {blok.heading}
+    </span>
+    <span slot="subtext">
+        {blok.subheading}
+    </span>
+    <spawn class="flex items-start gap-2 w-full" slot="call-to-action">
+        { () => {
+            if (blok.secondaryAction) {
+                return <a class="btn btn-secondary btn-outline max-w-fit">{blok.secondaryAction}</a>
+            }
+        }}
+        <a class="btn btn-primary max-w-fit">{blok.callToAction}</a>
+    </span>
+</Hero>
