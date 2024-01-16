@@ -14,7 +14,7 @@ const { data } = await storyblokApi.get(`cdn/stories`, {
 const articles = data.stories
 ---
 
-<section class="mx-6 my-12" {...storyblokEditable(blok)}>
+<div {...storyblokEditable(blok)}>
     <h2 class="text-6xl text-primary font-bold text-center mb-12">
         {blok.heading}
     </h2>
@@ -31,4 +31,4 @@ const articles = data.stories
             })
         }
     </ul>
-</section>
+</div>
