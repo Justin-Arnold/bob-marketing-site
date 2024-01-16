@@ -65,6 +65,7 @@ export default defineConfig({
                 menu_item_action: 'storyblok/blocks/menu_items/ActionItem',
                 text_content: 'storyblok/TextContent',
                 personnel_card_grid: 'storyblok/PersonnelCardGrid',
+                call_to_action_banner: 'storyblok/CallToActionBanner',
             }
         }),
         icon()
