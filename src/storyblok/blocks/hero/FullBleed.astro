@@ -5,9 +5,9 @@ import Hero from '../../../components/Hero.astro'
 const { blok } = Astro.props
 ---
 
-<div {...storyblokEditable(blok)} class="full-bleed relative max-h-[600px]">
+<div {...storyblokEditable(blok)} class="full-bleed relative max-h-[75vh]">
     <div class="brightness-[20%] h-full overflow-hidden">
-        <img src={blok.background.filename} alt="UI Image" class="object-cover object-top w-full h-full"/>
+        <img src={blok.background.filename} alt="UI Image" class="object-cover object-top xl:object-center w-full h-full"/>
     </div>
     <div class="absolute top-0 left-0 w-full wrapper">
         <Hero>
