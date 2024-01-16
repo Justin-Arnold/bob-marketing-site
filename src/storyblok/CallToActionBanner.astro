@@ -1,32 +1,10 @@
 ---
 import { storyblokEditable } from '@storyblok/astro'
-import StoryblokComponent from '@storyblok/astro/StoryblokComponent.astro'
 
 const { blok } = Astro.props
+console.log(blok.call_to_action_link)
 ---
-<!-- <Hero>
-    <span slot="pre-heading">
-        {
-            blok.preheading?.map((subBlok: any) => {
-                return <StoryblokComponent blok={subBlok} />
-            })
-        }
-    </span>
-    <span slot="heading">
-        {blok.heading}
-    </span>
-    <span slot="subtext">
-        {blok.subheading}
-    </span>
-    <span class="flex items-start gap-2 w-full" slot="call-to-action">
-        { () => {
-            if (blok.secondaryAction) {
-                return <a class="btn btn-secondary btn-outline max-w-fit">{blok.secondaryAction}</a>
-            }
-        }}
-        <a class="btn btn-primary max-w-fit">{blok.callToAction}</a>
-    </span>
-</Hero> -->
+
 <div class="hero" {...storyblokEditable(blok)}>
     <div class="content hero-content flex-col items-start md:flex-row md:items-center">
         <!-- Banner Header -->
@@ -38,7 +16,7 @@ const { blok } = Astro.props
             <p class="sub-2">
                 {blok.subtext}
             </p>
-            <a href={blok.call_to_action_link} class="btn btn-primary max-w-fit">
+            <a href={'/' + blok.call_to_action_link.cached_url} class="btn btn-primary max-w-fit">
                 {blok.call_to_action}
             </a>
         </div>
