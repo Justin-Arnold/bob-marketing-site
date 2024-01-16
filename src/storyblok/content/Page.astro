@@ -9,6 +9,20 @@ const { blok } = Astro.props
     import AOS from 'aos'
     import 'aos/dist/aos.css'
 
+    const sections = document.querySelectorAll('section');
+    let first = true;
+
+    sections.forEach(section => {
+        if (first) {
+            first = false;
+            return;
+        }
+        section.setAttribute('data-aos', 'fade-up');
+        section.setAttribute('data-aos-duration', '1000');
+        section.setAttribute('data-aos-offset', '100');
+        section.setAttribute('data-aos-mirror', 'true');
+    });
+
     AOS.init()
 </script>
 
@@ -19,7 +33,7 @@ const { blok } = Astro.props
                 return <StoryblokComponent blok={blok} />
             })
         }
-        <div class="w-full flex flex-col gap-32">
+        <div class="w-full flex flex-col gap-32 grow" transition:animate="slide">
             {
                 blok.body?.map((blok: any) => {
                     return <StoryblokComponent blok={blok} />

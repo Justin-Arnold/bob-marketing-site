@@ -5,7 +5,7 @@ import CostAnimation from '../components/CostAnimation.astro'
 const { blok } = Astro.props
 ---
 
-<section {...storyblokEditable(blok)} class="flex justify-center">
+<div {...storyblokEditable(blok)} class="flex justify-center">
     <div class="card text-neutral bg-base-100 shadow-xl w-[600px]">
         <div class="card-body relative overflow-clip">
             <div class="absolute left-0 top-0 w-full h-[300px] sm:h-[400px] px-4 flex items-end">
@@ -34,4 +34,4 @@ const { blok } = Astro.props
             </ul>
         </div>
     </div>
-</section>
+</div>
