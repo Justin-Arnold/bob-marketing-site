@@ -6,7 +6,7 @@ const { blok } = Astro.props
 
 <a
     {...storyblokEditable(blok)}
-    href={blok.url.cached_url ?? blok.url.url}
+    href={'/' + blok.url.cached_url}
 >
     { blok.title }
 </a>
