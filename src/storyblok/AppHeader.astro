@@ -5,7 +5,7 @@ import StoryblokComponent from '@storyblok/astro/StoryblokComponent.astro'
 const { blok } = Astro.props
 ---
 
-<div {...storyblokEditable(blok)} class="navbar bg-base-100 justify-center h-12">
+<div {...storyblokEditable(blok)} class="fixed z-[100] navbar bg-base-100 justify-center">
     <div class="navbar-start max-w-[500px]">
         {
             blok.leftSide.map((subBlok: any) => {
