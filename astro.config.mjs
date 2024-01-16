@@ -50,7 +50,7 @@ export default defineConfig({
                 pricing_card: 'storyblok/PricingCard',
                 horizontal_stack: 'storyblok/HorizontalStack',
                 full_bleed_hero: 'storyblok/blocks/hero/FullBleed',
-                personnel_card: 'storyblok/PersonnelCard',
+                personnel_card: 'storyblok/blocks/cards/PersonnelCard',
                 flex_list: 'storyblok/FlexList',
                 statistic: 'storyblok/Statistic',
                 accent_button: 'storyblok/AccentButton',
@@ -64,6 +64,7 @@ export default defineConfig({
                 menu_item_nav: 'storyblok/blocks/menu_items/NavItem',
                 menu_item_action: 'storyblok/blocks/menu_items/ActionItem',
                 text_content: 'storyblok/TextContent',
+                personnel_card_grid: 'storyblok/PersonnelCardGrid',
             }
         }),
         icon()

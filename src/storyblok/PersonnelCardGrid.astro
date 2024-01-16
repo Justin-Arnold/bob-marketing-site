@@ -1,0 +1,17 @@
+---
+const { blok } = Astro.props
+---
+
+<div class="grid gap-4 grid-cols-4 grid-flow-row">{
+    blok.personnel.map((person: any) => {
+        return (
+            <span class="card card-compact bg-neutral shadow-xl overflow-clip">
+                <img src={person.content.photo.filename} class="w-full aspect-square mx-auto mb-4" />
+                <div class="card-body text-base-100">
+                    <h3 class="-mt-3 card-title">{person.content.name}</h3>
+                    <p class="-mt-3">{person.content.title}</p>
+                </div>
+            </span>
+        )
+    })
+}</div>
