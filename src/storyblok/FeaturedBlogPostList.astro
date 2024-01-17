@@ -3,6 +3,10 @@ import PostCard from '../components/PostCard.astro'
 import { storyblokEditable } from '@storyblok/astro'
 
 const { blok } = Astro.props
+
+function getFeaturedUrl(path: string) {
+    return path.split('/').join('/featured/')
+}
 ---
 
 <div {...storyblokEditable(blok)}>
@@ -14,7 +18,11 @@ const { blok } = Astro.props
             article.content.slug = article.slug
             return (
                 <li>
-                    <PostCard content={article.content.body[0]} url={article.path} />
+                    <PostCard
+                        content={article.content.body[0]}
+                        url={getFeaturedUrl(article.path)}
+                        source="featured"
+                    />
                 </li>
             )
             })

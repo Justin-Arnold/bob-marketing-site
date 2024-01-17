@@ -5,6 +5,11 @@ import { renderRichText } from "@storyblok/js";
 const { blok } = Astro.props
 
 const renderedRichText = renderRichText(blok.content);
+
+const url = Astro.url.pathname
+const pathList = url.split("/")
+const parentPath = pathList[pathList.length - 2]
+const transitionName =  `media-image-${blok.preview.id}-${parentPath}`
 ---
 
 <div {...storyblokEditable(blok)} class="text-center bg-base text-white p-10 flex flex-col items-center">
@@ -16,7 +21,7 @@ const renderedRichText = renderRichText(blok.content);
         <h1 class="text-left">{blok.title}</h1>
         <p class="text-left text-sm">{blok.description}</p>
         <hr/>
-        <img src={blok.preview.filename} />
+        <img src={blok.preview.filename} transition:name={transitionName} />
         <article set:html={renderedRichText}></article>
         <hr/>
         <div class="flex">
