@@ -1,10 +1,12 @@
 ---
-const { content, url } = Astro.props;
+const { content, url, source } = Astro.props;
 
+const transitionName = `media-image-${content.preview.id}-${source}`;
 ---
 
+
 <div class="card bg-base-100 shadow-xl h-[500px]">
-    <figure class="h-48 shrink-0">
+    <figure class="h-48 shrink-0"  transition:name={transitionName}>
         <img src={content.preview.filename}/>
     </figure>
     <div class="card-body">

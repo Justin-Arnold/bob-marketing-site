@@ -8,7 +8,6 @@ const storyblokApi = useStoryblokApi()
 const { data } = await storyblokApi.get(`cdn/stories`, {
     version: import.meta.env.DEV ? "draft" : "published",
     starts_with: 'posts/',
-//   is_startpage: 0,
 })
 
 const articles = data.stories
@@ -25,7 +24,11 @@ const articles = data.stories
             article.content.slug = article.slug
             return (
                 <li>
-                    <PostCard content={article.content.body[0]} url={article.path} />
+                    <PostCard
+                        content={article.content.body[0]}
+                        url={article.path}
+                        source="blog"
+                    />
                 </li>
             )
             })
