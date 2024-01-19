@@ -7,40 +7,42 @@ const { blok } = Astro.props
 const renderedRichText = renderRichText(blok.content);
 
 const url = Astro.url.pathname
-const pathList = url.split("/")
+const pathList = url.split("/").filter((item) => item !== "")
 const parentPath = pathList[pathList.length - 2]
 const transitionName =  `media-image-${blok.preview.id}-${parentPath}`
 ---
 
-<div {...storyblokEditable(blok)} class="text-center bg-base text-white p-10 flex flex-col items-center">
-    <div class="prose">
-        <div class="flex items-center gap-4">
-            <div class="badge badge-primary badge-outline">Article</div>
-            <p>{blok.posted.split(" ")[0]}</p>
-        </div>
-        <h1 class="text-left">{blok.title}</h1>
-        <p class="text-left text-sm">{blok.description}</p>
-        <hr/>
-        <img src={blok.preview.filename} transition:name={transitionName} />
-        <article set:html={renderedRichText}></article>
-        <hr/>
-        <div class="flex">
-            <div class="card card-compact bg-base-100 ">
-                <span class="card-body flex-row">
-                    <div class="avatar">
-                        <div class="w-20 rounded-full">
-                            <img src={blok.author.content.photo.filename} class="m-0"/>
+<div {...storyblokEditable(blok)} class="p-12">
+    <div class="flex flex-col items-center bg-base-100 rounded-xl shadow-md">
+        <div class="prose">
+            <div class="flex items-center gap-4">
+                <div class="badge badge-primary badge-outline">Article</div>
+                <p>{blok.posted.split(" ")[0]}</p>
+            </div>
+            <h1 class="text-left">{blok.title}</h1>
+            <p class="text-left text-sm">{blok.description}</p>
+            <hr/>
+            <img src={blok.preview.filename} transition:name={transitionName} />
+            <article set:html={renderedRichText}></article>
+            <hr/>
+            <div class="flex">
+                <div class="card card-compact bg-base-100 ">
+                    <span class="card-body flex-row">
+                        <div class="avatar">
+                            <div class="w-20 rounded-full">
+                                <img src={blok.author.content.photo.filename} class="m-0"/>
+                            </div>
                         </div>
-                    </div>
-                    <span class="flex flex-col items-start">
-                        <h3 class="m-0">
-                            {blok.author.content.name}
-                        </h3>
-                        <p class="text-xs line-clamp-2 m-0 text-left">
-                            {blok.author.content.description}
-                        </p>
+                        <span class="flex flex-col items-start">
+                            <h3 class="m-0">
+                                {blok.author.content.name}
+                            </h3>
+                            <p class="text-xs line-clamp-2 m-0 text-left">
+                                {blok.author.content.description}
+                            </p>
+                        </span>
                     </span>
-                </span>
+                </div>
             </div>
         </div>
     </div>
