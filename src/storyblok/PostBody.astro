@@ -7,7 +7,7 @@ const { blok } = Astro.props
 const renderedRichText = renderRichText(blok.content);
 
 const url = Astro.url.pathname
-const pathList = url.split("/")
+const pathList = url.split("/").filter((item) => item !== "")
 const parentPath = pathList[pathList.length - 2]
 const transitionName =  `media-image-${blok.preview.id}-${parentPath}`
 ---
