@@ -2,11 +2,20 @@
 import { storyblokEditable } from '@storyblok/astro'
 
 const { blok } = Astro.props
+
+const url = Astro.url.pathname
+const pathList = url.split("/").filter((item) => item !== "")
+const rootPath = pathList[0]
+
+const isActitve = rootPath === blok.url.cached_url
+
+console.log(isActitve)
 ---
 
 <a
     {...storyblokEditable(blok)}
     href={'/' + blok.url.cached_url}
+    class={isActitve ? 'text-primary' : 'text-neutral'}
 >
     { blok.title }
 </a>
