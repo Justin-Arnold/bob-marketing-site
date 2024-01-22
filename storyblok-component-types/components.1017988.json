@@ -30,14 +30,16 @@
       "name": "accent_button",
       "display_name": null,
       "created_at": "2024-01-04T15:07:05.161Z",
-      "updated_at": "2024-01-04T15:08:14.182Z",
+      "updated_at": "2024-01-22T15:44:55.864Z",
       "id": 127096,
       "schema": {
         "title": {
-          "type": "text"
+          "type": "text",
+          "required": true
         },
         "link": {
-          "type": "multilink"
+          "type": "multilink",
+          "required": true
         }
       },
       "image": null,

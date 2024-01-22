@@ -58,8 +58,8 @@ export type MultilinkStoryblok =
     };
 
 export interface AccentButtonStoryblok {
-  title?: string;
-  link?: Exclude<MultilinkStoryblok, {linktype?: "email"} | {linktype?: "asset"}>;
+  title: string;
+  link: Exclude<MultilinkStoryblok, {linktype?: "email"} | {linktype?: "asset"}>;
   _uid: string;
   component: "accent_button";
   [k: string]: any;
