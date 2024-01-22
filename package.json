@@ -7,7 +7,8 @@
     "start": "astro dev",
     "build": "astro check && astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "generate-sb-types": "storyblok-generate-ts source=./storyblok-component-types/components.1017988.json target=./storyblok-component-types/component-types-sb"
   },
   "dependencies": {
     "@astrojs/check": "^0.3.3",
@@ -26,6 +27,7 @@
     "@iconify/json": "^2.2.162",
     "@tailwindcss/typography": "^0.5.10",
     "@types/aos": "^3.0.7",
-    "@vitejs/plugin-basic-ssl": "^1.0.2"
+    "@vitejs/plugin-basic-ssl": "^1.0.2",
+    "storyblok-generate-ts": "^2.0.1"
   }
 }

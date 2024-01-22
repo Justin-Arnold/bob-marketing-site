@@ -1,0 +1,233 @@
+{
+  "presets": [
+    {
+      "id": 1648,
+      "name": "Gradient for Business",
+      "preset": {
+        "_uid": "dc208d7f-ac9f-472e-8676-83dc8f7718d8",
+        "logo": {
+          "id": 302876,
+          "alt": "",
+          "name": "",
+          "focus": "",
+          "title": "",
+          "source": "",
+          "filename": "https://a-us.storyblok.com/f/1017988/500x500/1e18ec0c96/logo.png",
+          "copyright": "",
+          "fieldtype": "asset",
+          "meta_data": {},
+          "is_private": "",
+          "is_external_url": false
+        },
+        "name": "Gradient for Business",
+        "component": "logoAndName"
+      },
+      "component_id": 125735,
+      "space_id": 1017988,
+      "created_at": "2023-12-27T21:29:09.335Z",
+      "updated_at": "2023-12-27T21:29:09.335Z",
+      "image": "//a-us.storyblok.com/f/1017988/x/8a22035445/cleanshot-2023-12-27-at-16-28-36-2x.png",
+      "color": "",
+      "icon": "",
+      "description": "with Atom Logo"
+    },
+    {
+      "id": 1656,
+      "name": "Main Footer",
+      "preset": {
+        "_uid": "6da83c06-95a9-4faf-a3af-0b84a785fdbe",
+        "logo": [
+          {
+            "_uid": "b8c2a138-1855-41e9-aa65-611f851306f5",
+            "logo": {
+              "id": 302876,
+              "alt": "",
+              "name": "",
+              "focus": "",
+              "title": "",
+              "source": "",
+              "filename": "https://a-us.storyblok.com/f/1017988/500x500/1e18ec0c96/logo.png",
+              "copyright": "",
+              "fieldtype": "asset",
+              "meta_data": {},
+              "is_private": "",
+              "is_external_url": false
+            },
+            "name": "Gradient for Business",
+            "component": "logoAndName"
+          }
+        ],
+        "socials": [],
+        "component": "footer",
+        "copywrite": "©2023 GradeCam, LLC",
+        "extraLinks": [
+          {
+            "url": {
+              "id": "",
+              "url": "https://gradecam.com/privacy/",
+              "linktype": "url",
+              "fieldtype": "multilink",
+              "cached_url": "https://gradecam.com/privacy/"
+            },
+            "_uid": "2df1a458-98ed-4acc-ab23-773a83f1e52b",
+            "title": "Privacy Policy",
+            "isButton": false,
+            "component": "link"
+          },
+          {
+            "url": {
+              "id": "",
+              "url": "https://gradecam.com/privacy/",
+              "linktype": "url",
+              "fieldtype": "multilink",
+              "cached_url": "https://gradecam.com/privacy/"
+            },
+            "_uid": "83f0978c-fcf2-4320-a23c-718212c96c52",
+            "title": "Terms of Service",
+            "isButton": false,
+            "component": "link"
+          }
+        ],
+        "miscCategories": [],
+        "contactInformation": [
+          {
+            "_uid": "9645f203-2046-415f-b277-682224536d2d",
+            "image": {
+              "id": null,
+              "alt": null,
+              "name": "",
+              "focus": null,
+              "title": null,
+              "source": null,
+              "filename": "",
+              "copyright": null,
+              "fieldtype": "asset",
+              "meta_data": {}
+            },
+            "component": "uiTeaserImage"
+          }
+        ]
+      },
+      "component_id": 125843,
+      "space_id": 1017988,
+      "created_at": "2024-01-01T03:44:17.445Z",
+      "updated_at": "2024-01-01T03:44:17.445Z",
+      "image": "",
+      "color": "",
+      "icon": "",
+      "description": ""
+    },
+    {
+      "id": 1655,
+      "name": "Main Header",
+      "preset": {
+        "_uid": "80dbb7ad-dc17-4a45-9906-228cde9b669f",
+        "leftSide": [
+          {
+            "_uid": "214ba541-8e74-410f-a7b7-945c378ed7dc",
+            "logo": {
+              "id": 302876,
+              "alt": "",
+              "name": "",
+              "focus": "",
+              "title": "",
+              "source": "",
+              "filename": "https://a-us.storyblok.com/f/1017988/500x500/1e18ec0c96/logo.png",
+              "copyright": "",
+              "fieldtype": "asset",
+              "meta_data": {},
+              "is_private": "",
+              "is_external_url": false
+            },
+            "name": "Gradient for Business",
+            "component": "logoAndName"
+          }
+        ],
+        "component": "siteHeader",
+        "rightSide": [
+          {
+            "_uid": "2047cd91-54f0-4f99-a8a0-1e1b1c76c962",
+            "component": "siteHeaderMenu",
+            "primaryItems": [
+              {
+                "url": {
+                  "id": "",
+                  "url": "app.gradecam.com",
+                  "linktype": "url",
+                  "fieldtype": "multilink",
+                  "cached_url": "app.gradecam.com"
+                },
+                "_uid": "20bcdc93-87db-468c-954c-4891417373b3",
+                "title": "Login",
+                "isButton": true,
+                "component": "link"
+              }
+            ],
+            "secondaryItems": [
+              {
+                "url": {
+                  "id": "",
+                  "url": "",
+                  "linktype": "story",
+                  "fieldtype": "multilink",
+                  "cached_url": ""
+                },
+                "_uid": "1eb8f1ce-9b85-4a25-8943-d24eacca4757",
+                "title": "Home",
+                "isButton": false,
+                "component": "link"
+              },
+              {
+                "url": {
+                  "id": "e3c43ea1-bfaf-4ed4-9f70-8b84c69634ea",
+                  "url": "",
+                  "linktype": "story",
+                  "fieldtype": "multilink",
+                  "cached_url": "about"
+                },
+                "_uid": "0c6ff704-e267-4b4b-80f7-a89cccf24f85",
+                "title": "About",
+                "isButton": false,
+                "component": "link"
+              },
+              {
+                "url": {
+                  "id": "666ec4e5-22b9-4212-aa5d-747b1d62f3d4",
+                  "url": "",
+                  "linktype": "story",
+                  "fieldtype": "multilink",
+                  "cached_url": "contact"
+                },
+                "_uid": "9057baf6-e2d4-44db-89ac-4c032106e972",
+                "title": "Contact",
+                "isButton": false,
+                "component": "link"
+              },
+              {
+                "url": {
+                  "id": "6c87f55b-d639-4179-b9c3-a6fd0c52ecaf",
+                  "url": "",
+                  "linktype": "story",
+                  "fieldtype": "multilink",
+                  "cached_url": "blog"
+                },
+                "_uid": "7f7c0d2e-0d01-4eaa-a4ec-5a664d97db8b",
+                "title": "Blog",
+                "isButton": false,
+                "component": "link"
+              }
+            ]
+          }
+        ]
+      },
+      "component_id": 125740,
+      "space_id": 1017988,
+      "created_at": "2024-01-01T03:28:34.840Z",
+      "updated_at": "2024-01-04T20:08:44.772Z",
+      "image": "",
+      "color": "",
+      "icon": "",
+      "description": ""
+    }
+  ]
+}
