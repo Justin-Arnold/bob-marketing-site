@@ -1,9 +1,16 @@
 ---
 import { storyblokEditable } from '@storyblok/astro'
+import type { ImageCardStoryblok } from '@root/storyblok-component-types/component-types-sb'
+
+interface Props {
+    blok: ImageCardStoryblok
+}
 
 const { blok } = Astro.props
+const optimizedImagePath = blok.image.filename + '/m/1000x0'
+
 ---
 
 <div {...storyblokEditable(blok)} class="rounded-lg sm:p-2 bg-neutral/20 w-full aspect-auto full-bleed sm:no-bleed">
-    <img src={blok.image.filename} alt="UI Image" />
+    <img src={optimizedImagePath} alt="UI Image" class="sm:rounded-lg"/>
 </div>

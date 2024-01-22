@@ -93,6 +93,7 @@ export interface CallToActionBannerStoryblok {
 export interface CardGroupStoryblok {
   cards?: (
     | CardGroupStoryblok
+    | ImageCardStoryblok
     | InfoCardStoryblok
     | PersonnelCardStoryblok
     | PricingCardStoryblok
@@ -124,6 +125,7 @@ export interface CarouselStoryblok {
     | GridStoryblok
     | HeroStoryblok
     | HorizontalStackStoryblok
+    | ImageCardStoryblok
     | InfoCardStoryblok
     | LinkStoryblok
     | ListStoryblok
@@ -145,7 +147,6 @@ export interface CarouselStoryblok {
     | TeaserStoryblok
     | TestimonialCardStoryblok
     | TextContentStoryblok
-    | UiTeaserImageStoryblok
   )[];
   _uid: string;
   component: "carousel";
@@ -183,6 +184,7 @@ export interface DisplayGridStoryblok {
     | GridStoryblok
     | HeroStoryblok
     | HorizontalStackStoryblok
+    | ImageCardStoryblok
     | InfoCardStoryblok
     | LinkStoryblok
     | ListStoryblok
@@ -204,7 +206,6 @@ export interface DisplayGridStoryblok {
     | TeaserStoryblok
     | TestimonialCardStoryblok
     | TextContentStoryblok
-    | UiTeaserImageStoryblok
   )[];
   _uid: string;
   component: "display_grid";
@@ -247,6 +248,7 @@ export interface FooterStoryblok {
     | GridStoryblok
     | HeroStoryblok
     | HorizontalStackStoryblok
+    | ImageCardStoryblok
     | InfoCardStoryblok
     | LinkStoryblok
     | ListStoryblok
@@ -268,7 +270,6 @@ export interface FooterStoryblok {
     | TeaserStoryblok
     | TestimonialCardStoryblok
     | TextContentStoryblok
-    | UiTeaserImageStoryblok
   )[];
   socials?: (
     | AboutPageTitleStoryblok
@@ -290,6 +291,7 @@ export interface FooterStoryblok {
     | GridStoryblok
     | HeroStoryblok
     | HorizontalStackStoryblok
+    | ImageCardStoryblok
     | InfoCardStoryblok
     | LinkStoryblok
     | ListStoryblok
@@ -311,7 +313,6 @@ export interface FooterStoryblok {
     | TeaserStoryblok
     | TestimonialCardStoryblok
     | TextContentStoryblok
-    | UiTeaserImageStoryblok
   )[];
   miscCategories?: (
     | AboutPageTitleStoryblok
@@ -333,6 +334,7 @@ export interface FooterStoryblok {
     | GridStoryblok
     | HeroStoryblok
     | HorizontalStackStoryblok
+    | ImageCardStoryblok
     | InfoCardStoryblok
     | LinkStoryblok
     | ListStoryblok
@@ -354,7 +356,6 @@ export interface FooterStoryblok {
     | TeaserStoryblok
     | TestimonialCardStoryblok
     | TextContentStoryblok
-    | UiTeaserImageStoryblok
   )[];
   contactInformation?: (
     | AboutPageTitleStoryblok
@@ -376,6 +377,7 @@ export interface FooterStoryblok {
     | GridStoryblok
     | HeroStoryblok
     | HorizontalStackStoryblok
+    | ImageCardStoryblok
     | InfoCardStoryblok
     | LinkStoryblok
     | ListStoryblok
@@ -397,7 +399,6 @@ export interface FooterStoryblok {
     | TeaserStoryblok
     | TestimonialCardStoryblok
     | TextContentStoryblok
-    | UiTeaserImageStoryblok
   )[];
   copywrite?: string;
   extraLinks?: LinkStoryblok[];
@@ -427,6 +428,7 @@ export interface FullBleedStoryblok {
     | GridStoryblok
     | HeroStoryblok
     | HorizontalStackStoryblok
+    | ImageCardStoryblok
     | InfoCardStoryblok
     | LinkStoryblok
     | ListStoryblok
@@ -448,7 +450,6 @@ export interface FullBleedStoryblok {
     | TeaserStoryblok
     | TestimonialCardStoryblok
     | TextContentStoryblok
-    | UiTeaserImageStoryblok
   )[];
   _uid: string;
   component: "full_bleed";
@@ -498,6 +499,7 @@ export interface GlobalStoryblok {
     | GridStoryblok
     | HeroStoryblok
     | HorizontalStackStoryblok
+    | ImageCardStoryblok
     | InfoCardStoryblok
     | LinkStoryblok
     | ListStoryblok
@@ -519,7 +521,6 @@ export interface GlobalStoryblok {
     | TeaserStoryblok
     | TestimonialCardStoryblok
     | TextContentStoryblok
-    | UiTeaserImageStoryblok
   )[];
   _uid: string;
   component: "global";
@@ -555,6 +556,7 @@ export interface GridStoryblok {
     | GridStoryblok
     | HeroStoryblok
     | HorizontalStackStoryblok
+    | ImageCardStoryblok
     | InfoCardStoryblok
     | LinkStoryblok
     | ListStoryblok
@@ -576,7 +578,6 @@ export interface GridStoryblok {
     | TeaserStoryblok
     | TestimonialCardStoryblok
     | TextContentStoryblok
-    | UiTeaserImageStoryblok
   )[];
   _uid: string;
   component: "grid";
@@ -604,6 +605,7 @@ export interface HeroStoryblok {
     | GridStoryblok
     | HeroStoryblok
     | HorizontalStackStoryblok
+    | ImageCardStoryblok
     | InfoCardStoryblok
     | LinkStoryblok
     | ListStoryblok
@@ -625,7 +627,6 @@ export interface HeroStoryblok {
     | TeaserStoryblok
     | TestimonialCardStoryblok
     | TextContentStoryblok
-    | UiTeaserImageStoryblok
   )[];
   heading?: string;
   subheading?: string;
@@ -657,6 +658,7 @@ export interface HorizontalStackStoryblok {
     | GridStoryblok
     | HeroStoryblok
     | HorizontalStackStoryblok
+    | ImageCardStoryblok
     | InfoCardStoryblok
     | LinkStoryblok
     | ListStoryblok
@@ -678,10 +680,16 @@ export interface HorizontalStackStoryblok {
     | TeaserStoryblok
     | TestimonialCardStoryblok
     | TextContentStoryblok
-    | UiTeaserImageStoryblok
   )[];
   _uid: string;
   component: "horizontal_stack";
+  [k: string]: any;
+}
+
+export interface ImageCardStoryblok {
+  image: AssetStoryblok;
+  _uid: string;
+  component: "image_card";
   [k: string]: any;
 }
 
@@ -755,6 +763,7 @@ export interface PageStoryblok {
     | GridStoryblok
     | HeroStoryblok
     | HorizontalStackStoryblok
+    | ImageCardStoryblok
     | InfoCardStoryblok
     | LinkStoryblok
     | ListStoryblok
@@ -776,7 +785,6 @@ export interface PageStoryblok {
     | TeaserStoryblok
     | TestimonialCardStoryblok
     | TextContentStoryblok
-    | UiTeaserImageStoryblok
   )[];
   body?: (
     | AboutPageTitleStoryblok
@@ -798,6 +806,7 @@ export interface PageStoryblok {
     | GridStoryblok
     | HeroStoryblok
     | HorizontalStackStoryblok
+    | ImageCardStoryblok
     | InfoCardStoryblok
     | LinkStoryblok
     | ListStoryblok
@@ -819,7 +828,6 @@ export interface PageStoryblok {
     | TeaserStoryblok
     | TestimonialCardStoryblok
     | TextContentStoryblok
-    | UiTeaserImageStoryblok
   )[];
   footer?: (
     | AboutPageTitleStoryblok
@@ -841,6 +849,7 @@ export interface PageStoryblok {
     | GridStoryblok
     | HeroStoryblok
     | HorizontalStackStoryblok
+    | ImageCardStoryblok
     | InfoCardStoryblok
     | LinkStoryblok
     | ListStoryblok
@@ -862,7 +871,6 @@ export interface PageStoryblok {
     | TeaserStoryblok
     | TestimonialCardStoryblok
     | TextContentStoryblok
-    | UiTeaserImageStoryblok
   )[];
   _uid: string;
   component: "page";
@@ -892,6 +900,7 @@ export interface PageSectionStoryblok {
     | GridStoryblok
     | HeroStoryblok
     | HorizontalStackStoryblok
+    | ImageCardStoryblok
     | InfoCardStoryblok
     | LinkStoryblok
     | ListStoryblok
@@ -913,7 +922,6 @@ export interface PageSectionStoryblok {
     | TeaserStoryblok
     | TestimonialCardStoryblok
     | TextContentStoryblok
-    | UiTeaserImageStoryblok
   )[];
   _uid: string;
   component: "page_section";
@@ -979,6 +987,7 @@ export interface PostStoryblok {
     | GridStoryblok
     | HeroStoryblok
     | HorizontalStackStoryblok
+    | ImageCardStoryblok
     | InfoCardStoryblok
     | LinkStoryblok
     | ListStoryblok
@@ -1000,7 +1009,6 @@ export interface PostStoryblok {
     | TeaserStoryblok
     | TestimonialCardStoryblok
     | TextContentStoryblok
-    | UiTeaserImageStoryblok
   )[];
   body?: PostBodyStoryblok[];
   footer?: (
@@ -1023,6 +1031,7 @@ export interface PostStoryblok {
     | GridStoryblok
     | HeroStoryblok
     | HorizontalStackStoryblok
+    | ImageCardStoryblok
     | InfoCardStoryblok
     | LinkStoryblok
     | ListStoryblok
@@ -1044,7 +1053,6 @@ export interface PostStoryblok {
     | TeaserStoryblok
     | TestimonialCardStoryblok
     | TextContentStoryblok
-    | UiTeaserImageStoryblok
   )[];
   _uid: string;
   component: "post";
@@ -1107,6 +1115,7 @@ export interface SiteHeaderStoryblok {
     | GridStoryblok
     | HeroStoryblok
     | HorizontalStackStoryblok
+    | ImageCardStoryblok
     | InfoCardStoryblok
     | LinkStoryblok
     | ListStoryblok
@@ -1128,7 +1137,6 @@ export interface SiteHeaderStoryblok {
     | TeaserStoryblok
     | TestimonialCardStoryblok
     | TextContentStoryblok
-    | UiTeaserImageStoryblok
   )[];
   rightSide: (
     | AboutPageTitleStoryblok
@@ -1150,6 +1158,7 @@ export interface SiteHeaderStoryblok {
     | GridStoryblok
     | HeroStoryblok
     | HorizontalStackStoryblok
+    | ImageCardStoryblok
     | InfoCardStoryblok
     | LinkStoryblok
     | ListStoryblok
@@ -1171,7 +1180,6 @@ export interface SiteHeaderStoryblok {
     | TeaserStoryblok
     | TestimonialCardStoryblok
     | TextContentStoryblok
-    | UiTeaserImageStoryblok
   )[];
   _uid: string;
   component: "siteHeader";
@@ -1213,12 +1221,5 @@ export interface TextContentStoryblok {
   body?: RichtextStoryblok;
   _uid: string;
   component: "text_content";
-  [k: string]: any;
-}
-
-export interface UiTeaserImageStoryblok {
-  image?: AssetStoryblok;
-  _uid: string;
-  component: "uiTeaserImage";
   [k: string]: any;
 }
