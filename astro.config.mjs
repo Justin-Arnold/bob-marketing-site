@@ -63,7 +63,7 @@ export default defineConfig({
                 siteHeader: 'storyblok/AppHeader',
                 siteHeaderMenu: 'storyblok/AppHeaderMenu',
                 statistic_card: 'storyblok/blocks/cards/StatisticCard',
-                testimonial_card:'storyblok/TestimonialCard',
+                testimonial_card:'storyblok/blocks/cards/TestimonialCard',
                 text_card: 'storyblok/blocks/cards/TextCard',
                 ImageCard: 'storyblok/blocks/cards/ImageCard',
                 featured_blog_post_list: 'storyblok/FeaturedBlogPostList',
