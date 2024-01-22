@@ -65,7 +65,7 @@ export default defineConfig({
                 statistic_card: 'storyblok/blocks/cards/StatisticCard',
                 testimonial_card:'storyblok/TestimonialCard',
                 text_content: 'storyblok/TextContent',
-                uiTeaserImage: 'storyblok/UiTeaserImage',
+                ImageCard: 'storyblok/blocks/cards/ImageCard',
                 featured_blog_post_list: 'storyblok/FeaturedBlogPostList',
             }
         }),
