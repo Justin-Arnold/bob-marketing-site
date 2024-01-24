@@ -90,20 +90,6 @@ export interface CallToActionBannerStoryblok {
   [k: string]: any;
 }
 
-export interface CardGroupStoryblok {
-  cards?: (
-    | CardGroupStoryblok
-    | ImageCardStoryblok
-    | InfoCardStoryblok
-    | PersonnelCardStoryblok
-    | PricingCardStoryblok
-    | TestimonialCardStoryblok
-  )[];
-  _uid: string;
-  component: "cardGroup";
-  [k: string]: any;
-}
-
 export interface CarouselStoryblok {
   items?: (
     | AboutPageTitleStoryblok
@@ -111,11 +97,11 @@ export interface CarouselStoryblok {
     | BannerTextStoryblok
     | BlogPostListStoryblok
     | CallToActionBannerStoryblok
-    | CardGroupStoryblok
     | CarouselStoryblok
     | ContactFormStoryblok
     | FeatureStoryblok
     | FeaturedBlogPostListStoryblok
+    | FlexLayoutStoryblok
     | FooterStoryblok
     | FullBleedStoryblok
     | FullBleedHeroStoryblok
@@ -178,6 +164,19 @@ export interface FeaturedBlogPostListStoryblok {
   [k: string]: any;
 }
 
+export interface FlexLayoutStoryblok {
+  items?: (
+    | ImageCardStoryblok
+    | InfoCardStoryblok
+    | PersonnelCardStoryblok
+    | PricingCardStoryblok
+    | TestimonialCardStoryblok
+  )[];
+  _uid: string;
+  component: "flex_layout";
+  [k: string]: any;
+}
+
 export interface FooterStoryblok {
   logo?: (
     | AboutPageTitleStoryblok
@@ -185,11 +184,11 @@ export interface FooterStoryblok {
     | BannerTextStoryblok
     | BlogPostListStoryblok
     | CallToActionBannerStoryblok
-    | CardGroupStoryblok
     | CarouselStoryblok
     | ContactFormStoryblok
     | FeatureStoryblok
     | FeaturedBlogPostListStoryblok
+    | FlexLayoutStoryblok
     | FooterStoryblok
     | FullBleedStoryblok
     | FullBleedHeroStoryblok
@@ -228,11 +227,11 @@ export interface FooterStoryblok {
     | BannerTextStoryblok
     | BlogPostListStoryblok
     | CallToActionBannerStoryblok
-    | CardGroupStoryblok
     | CarouselStoryblok
     | ContactFormStoryblok
     | FeatureStoryblok
     | FeaturedBlogPostListStoryblok
+    | FlexLayoutStoryblok
     | FooterStoryblok
     | FullBleedStoryblok
     | FullBleedHeroStoryblok
@@ -271,11 +270,11 @@ export interface FooterStoryblok {
     | BannerTextStoryblok
     | BlogPostListStoryblok
     | CallToActionBannerStoryblok
-    | CardGroupStoryblok
     | CarouselStoryblok
     | ContactFormStoryblok
     | FeatureStoryblok
     | FeaturedBlogPostListStoryblok
+    | FlexLayoutStoryblok
     | FooterStoryblok
     | FullBleedStoryblok
     | FullBleedHeroStoryblok
@@ -314,11 +313,11 @@ export interface FooterStoryblok {
     | BannerTextStoryblok
     | BlogPostListStoryblok
     | CallToActionBannerStoryblok
-    | CardGroupStoryblok
     | CarouselStoryblok
     | ContactFormStoryblok
     | FeatureStoryblok
     | FeaturedBlogPostListStoryblok
+    | FlexLayoutStoryblok
     | FooterStoryblok
     | FullBleedStoryblok
     | FullBleedHeroStoryblok
@@ -365,11 +364,11 @@ export interface FullBleedStoryblok {
     | BannerTextStoryblok
     | BlogPostListStoryblok
     | CallToActionBannerStoryblok
-    | CardGroupStoryblok
     | CarouselStoryblok
     | ContactFormStoryblok
     | FeatureStoryblok
     | FeaturedBlogPostListStoryblok
+    | FlexLayoutStoryblok
     | FooterStoryblok
     | FullBleedStoryblok
     | FullBleedHeroStoryblok
@@ -436,11 +435,11 @@ export interface GlobalStoryblok {
     | BannerTextStoryblok
     | BlogPostListStoryblok
     | CallToActionBannerStoryblok
-    | CardGroupStoryblok
     | CarouselStoryblok
     | ContactFormStoryblok
     | FeatureStoryblok
     | FeaturedBlogPostListStoryblok
+    | FlexLayoutStoryblok
     | FooterStoryblok
     | FullBleedStoryblok
     | FullBleedHeroStoryblok
@@ -493,11 +492,11 @@ export interface GridStoryblok {
     | BannerTextStoryblok
     | BlogPostListStoryblok
     | CallToActionBannerStoryblok
-    | CardGroupStoryblok
     | CarouselStoryblok
     | ContactFormStoryblok
     | FeatureStoryblok
     | FeaturedBlogPostListStoryblok
+    | FlexLayoutStoryblok
     | FooterStoryblok
     | FullBleedStoryblok
     | FullBleedHeroStoryblok
@@ -542,11 +541,11 @@ export interface GridLayoutStoryblok {
     | BannerTextStoryblok
     | BlogPostListStoryblok
     | CallToActionBannerStoryblok
-    | CardGroupStoryblok
     | CarouselStoryblok
     | ContactFormStoryblok
     | FeatureStoryblok
     | FeaturedBlogPostListStoryblok
+    | FlexLayoutStoryblok
     | FooterStoryblok
     | FullBleedStoryblok
     | FullBleedHeroStoryblok
@@ -591,11 +590,11 @@ export interface HeroStoryblok {
     | BannerTextStoryblok
     | BlogPostListStoryblok
     | CallToActionBannerStoryblok
-    | CardGroupStoryblok
     | CarouselStoryblok
     | ContactFormStoryblok
     | FeatureStoryblok
     | FeaturedBlogPostListStoryblok
+    | FlexLayoutStoryblok
     | FooterStoryblok
     | FullBleedStoryblok
     | FullBleedHeroStoryblok
@@ -644,11 +643,11 @@ export interface HorizontalStackStoryblok {
     | BannerTextStoryblok
     | BlogPostListStoryblok
     | CallToActionBannerStoryblok
-    | CardGroupStoryblok
     | CarouselStoryblok
     | ContactFormStoryblok
     | FeatureStoryblok
     | FeaturedBlogPostListStoryblok
+    | FlexLayoutStoryblok
     | FooterStoryblok
     | FullBleedStoryblok
     | FullBleedHeroStoryblok
@@ -749,11 +748,11 @@ export interface PageStoryblok {
     | BannerTextStoryblok
     | BlogPostListStoryblok
     | CallToActionBannerStoryblok
-    | CardGroupStoryblok
     | CarouselStoryblok
     | ContactFormStoryblok
     | FeatureStoryblok
     | FeaturedBlogPostListStoryblok
+    | FlexLayoutStoryblok
     | FooterStoryblok
     | FullBleedStoryblok
     | FullBleedHeroStoryblok
@@ -792,11 +791,11 @@ export interface PageStoryblok {
     | BannerTextStoryblok
     | BlogPostListStoryblok
     | CallToActionBannerStoryblok
-    | CardGroupStoryblok
     | CarouselStoryblok
     | ContactFormStoryblok
     | FeatureStoryblok
     | FeaturedBlogPostListStoryblok
+    | FlexLayoutStoryblok
     | FooterStoryblok
     | FullBleedStoryblok
     | FullBleedHeroStoryblok
@@ -835,11 +834,11 @@ export interface PageStoryblok {
     | BannerTextStoryblok
     | BlogPostListStoryblok
     | CallToActionBannerStoryblok
-    | CardGroupStoryblok
     | CarouselStoryblok
     | ContactFormStoryblok
     | FeatureStoryblok
     | FeaturedBlogPostListStoryblok
+    | FlexLayoutStoryblok
     | FooterStoryblok
     | FullBleedStoryblok
     | FullBleedHeroStoryblok
@@ -886,11 +885,11 @@ export interface PageSectionStoryblok {
     | BannerTextStoryblok
     | BlogPostListStoryblok
     | CallToActionBannerStoryblok
-    | CardGroupStoryblok
     | CarouselStoryblok
     | ContactFormStoryblok
     | FeatureStoryblok
     | FeaturedBlogPostListStoryblok
+    | FlexLayoutStoryblok
     | FooterStoryblok
     | FullBleedStoryblok
     | FullBleedHeroStoryblok
@@ -973,11 +972,11 @@ export interface PostStoryblok {
     | BannerTextStoryblok
     | BlogPostListStoryblok
     | CallToActionBannerStoryblok
-    | CardGroupStoryblok
     | CarouselStoryblok
     | ContactFormStoryblok
     | FeatureStoryblok
     | FeaturedBlogPostListStoryblok
+    | FlexLayoutStoryblok
     | FooterStoryblok
     | FullBleedStoryblok
     | FullBleedHeroStoryblok
@@ -1017,11 +1016,11 @@ export interface PostStoryblok {
     | BannerTextStoryblok
     | BlogPostListStoryblok
     | CallToActionBannerStoryblok
-    | CardGroupStoryblok
     | CarouselStoryblok
     | ContactFormStoryblok
     | FeatureStoryblok
     | FeaturedBlogPostListStoryblok
+    | FlexLayoutStoryblok
     | FooterStoryblok
     | FullBleedStoryblok
     | FullBleedHeroStoryblok
@@ -1101,11 +1100,11 @@ export interface SiteHeaderStoryblok {
     | BannerTextStoryblok
     | BlogPostListStoryblok
     | CallToActionBannerStoryblok
-    | CardGroupStoryblok
     | CarouselStoryblok
     | ContactFormStoryblok
     | FeatureStoryblok
     | FeaturedBlogPostListStoryblok
+    | FlexLayoutStoryblok
     | FooterStoryblok
     | FullBleedStoryblok
     | FullBleedHeroStoryblok
@@ -1144,11 +1143,11 @@ export interface SiteHeaderStoryblok {
     | BannerTextStoryblok
     | BlogPostListStoryblok
     | CallToActionBannerStoryblok
-    | CardGroupStoryblok
     | CarouselStoryblok
     | ContactFormStoryblok
     | FeatureStoryblok
     | FeaturedBlogPostListStoryblok
+    | FlexLayoutStoryblok
     | FooterStoryblok
     | FullBleedStoryblok
     | FullBleedHeroStoryblok

@@ -140,36 +140,6 @@
       "icon": null
     },
     {
-      "name": "cardGroup",
-      "display_name": null,
-      "created_at": "2023-12-28T22:38:00.010Z",
-      "updated_at": "2024-01-16T01:02:44.562Z",
-      "id": 125935,
-      "schema": {
-        "cards": {
-          "type": "bloks",
-          "restrict_type": "groups",
-          "restrict_components": true,
-          "component_whitelist": [],
-          "component_group_whitelist": [
-            "acd1c4bf-144c-46f3-9902-0f5ec8da86ed"
-          ]
-        }
-      },
-      "image": null,
-      "preview_field": null,
-      "is_root": false,
-      "preview_tmpl": null,
-      "is_nestable": true,
-      "all_presets": [],
-      "preset_id": null,
-      "real_name": "cardGroup",
-      "component_group_uuid": "acd1c4bf-144c-46f3-9902-0f5ec8da86ed",
-      "color": null,
-      "icon": null,
-      "component_group_name": "Cards"
-    },
-    {
       "name": "carousel",
       "display_name": null,
       "created_at": "2024-01-12T12:59:06.036Z",
@@ -279,6 +249,36 @@
       "component_group_uuid": null,
       "color": null,
       "icon": null
+    },
+    {
+      "name": "flex_layout",
+      "display_name": null,
+      "created_at": "2023-12-28T22:38:00.010Z",
+      "updated_at": "2024-01-24T15:14:25.383Z",
+      "id": 125935,
+      "schema": {
+        "items": {
+          "type": "bloks",
+          "restrict_type": "groups",
+          "restrict_components": true,
+          "component_whitelist": [],
+          "component_group_whitelist": [
+            "acd1c4bf-144c-46f3-9902-0f5ec8da86ed"
+          ]
+        }
+      },
+      "image": null,
+      "preview_field": null,
+      "is_root": false,
+      "preview_tmpl": null,
+      "is_nestable": true,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "flex_layout",
+      "component_group_uuid": "26907bb9-2a02-4d8f-8f2d-8982a5f79c6c",
+      "color": null,
+      "icon": null,
+      "component_group_name": "Layouts"
     },
     {
       "name": "footer",
