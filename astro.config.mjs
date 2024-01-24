@@ -59,7 +59,7 @@ export default defineConfig({
                 personnel_card: 'storyblok/blocks/cards/PersonnelCard',
                 post_body: 'storyblok/PostBody',
                 post: 'storyblok/content/Post',
-                pricing_card: 'storyblok/PricingCard',
+                pricing_card: 'storyblok/blocks/cards/PricingCard',
                 siteHeader: 'storyblok/AppHeader',
                 siteHeaderMenu: 'storyblok/AppHeaderMenu',
                 statistic_card: 'storyblok/blocks/cards/StatisticCard',
