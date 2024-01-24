@@ -1,13 +1,17 @@
 ---
 import { storyblokEditable } from '@storyblok/astro'
 import { Icon } from 'astro-icon/components';
+import type { InfoCardStoryblok } from '@root/storyblok-component-types/component-types-sb';
 
+interface Props {
+    blok: InfoCardStoryblok
+}
 const { blok } = Astro.props
 ---
 <div {...storyblokEditable(blok)} class="card bg-base-100 shadow-xl min-w-48">
     <div class="card-body text-neutral content">
-        <Icon name={blok.icon} class="text-5xl"/>
+        <Icon name={blok.icon} class="text-5xl text-secondary"/>
         <h4 class="card-title">{blok.heading}</h4>
-        <p class="max-w-[500px]">{blok.subtext}</p>
+        <p class="max-w-[500px] text-neutral-300">{blok.subtext}</p>
     </div>
 </div>

@@ -48,7 +48,7 @@ export default defineConfig({
                 global_reference: 'storyblok/content/GlobalReference',
                 hero: 'storyblok//blocks/hero/NoBleed',
                 horizontal_stack: 'storyblok/HorizontalStack',
-                infoCard: 'storyblok/InfoCard',
+                infoCard: 'storyblok/blocks/cards/InfoCard',
                 link: 'storyblok/BaseLink',
                 logoAndName: 'storyblok/AppLogo',
                 menu_item_action: 'storyblok/blocks/menu_items/ActionItem',
