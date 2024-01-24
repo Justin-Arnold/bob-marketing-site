@@ -225,29 +225,6 @@
       "icon": null
     },
     {
-      "name": "display_grid",
-      "display_name": null,
-      "created_at": "2024-01-04T14:12:15.466Z",
-      "updated_at": "2024-01-16T03:56:08.338Z",
-      "id": 127049,
-      "schema": {
-        "items": {
-          "type": "bloks"
-        }
-      },
-      "image": null,
-      "preview_field": null,
-      "is_root": false,
-      "preview_tmpl": null,
-      "is_nestable": true,
-      "all_presets": [],
-      "preset_id": null,
-      "real_name": "display_grid",
-      "component_group_uuid": null,
-      "color": null,
-      "icon": null
-    },
-    {
       "name": "feature",
       "display_name": null,
       "created_at": "2023-12-22T04:50:28.403Z",
@@ -517,6 +494,30 @@
       "component_group_uuid": null,
       "color": null,
       "icon": null
+    },
+    {
+      "name": "grid_layout",
+      "display_name": null,
+      "created_at": "2024-01-04T14:12:15.466Z",
+      "updated_at": "2024-01-24T15:00:56.638Z",
+      "id": 127049,
+      "schema": {
+        "items": {
+          "type": "bloks"
+        }
+      },
+      "image": null,
+      "preview_field": null,
+      "is_root": false,
+      "preview_tmpl": null,
+      "is_nestable": true,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "grid_layout",
+      "component_group_uuid": "26907bb9-2a02-4d8f-8f2d-8982a5f79c6c",
+      "color": null,
+      "icon": null,
+      "component_group_name": "Layouts"
     },
     {
       "name": "hero",
@@ -1286,14 +1287,15 @@
       "component_group_name": "Cards"
     },
     {
-      "name": "text_content",
+      "name": "text_card",
       "display_name": null,
       "created_at": "2024-01-16T00:25:22.382Z",
-      "updated_at": "2024-01-16T00:25:53.763Z",
+      "updated_at": "2024-01-22T19:05:24.072Z",
       "id": 129279,
       "schema": {
         "body": {
-          "type": "richtext"
+          "type": "richtext",
+          "required": true
         }
       },
       "image": null,
@@ -1303,7 +1305,7 @@
       "is_nestable": true,
       "all_presets": [],
       "preset_id": null,
-      "real_name": "text_content",
+      "real_name": "text_card",
       "component_group_uuid": null,
       "color": null,
       "icon": null

@@ -42,7 +42,7 @@ export default defineConfig({
                 cardGroup: 'storyblok/CardGroup',
                 carousel: 'storyblok/Carousel',
                 contact_form: 'storyblok/ContactForm',
-                display_grid: 'storyblok/DisplayGrid',
+                grid_layout: 'storyblok/blocks/layouts/GridLayout',
                 footer: 'storyblok/AppFooter',
                 full_bleed_hero: 'storyblok/blocks/hero/FullBleed',
                 global_reference: 'storyblok/content/GlobalReference',

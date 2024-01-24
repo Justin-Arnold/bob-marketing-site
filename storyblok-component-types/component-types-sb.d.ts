@@ -114,7 +114,6 @@ export interface CarouselStoryblok {
     | CardGroupStoryblok
     | CarouselStoryblok
     | ContactFormStoryblok
-    | DisplayGridStoryblok
     | FeatureStoryblok
     | FeaturedBlogPostListStoryblok
     | FooterStoryblok
@@ -123,6 +122,7 @@ export interface CarouselStoryblok {
     | GlobalStoryblok
     | GlobalReferenceStoryblok
     | GridStoryblok
+    | GridLayoutStoryblok
     | HeroStoryblok
     | HorizontalStackStoryblok
     | ImageCardStoryblok
@@ -146,7 +146,7 @@ export interface CarouselStoryblok {
     | StatisticCardStoryblok
     | TeaserStoryblok
     | TestimonialCardStoryblok
-    | TextContentStoryblok
+    | TextCardStoryblok
   )[];
   _uid: string;
   component: "carousel";
@@ -160,55 +160,6 @@ export interface ContactFormStoryblok {
   email?: string;
   _uid: string;
   component: "contact_form";
-  [k: string]: any;
-}
-
-export interface DisplayGridStoryblok {
-  items?: (
-    | AboutPageTitleStoryblok
-    | AccentButtonStoryblok
-    | BannerTextStoryblok
-    | BlogPostListStoryblok
-    | CallToActionBannerStoryblok
-    | CardGroupStoryblok
-    | CarouselStoryblok
-    | ContactFormStoryblok
-    | DisplayGridStoryblok
-    | FeatureStoryblok
-    | FeaturedBlogPostListStoryblok
-    | FooterStoryblok
-    | FullBleedStoryblok
-    | FullBleedHeroStoryblok
-    | GlobalStoryblok
-    | GlobalReferenceStoryblok
-    | GridStoryblok
-    | HeroStoryblok
-    | HorizontalStackStoryblok
-    | ImageCardStoryblok
-    | InfoCardStoryblok
-    | LinkStoryblok
-    | ListStoryblok
-    | LogoAndNameStoryblok
-    | MenuItemActionStoryblok
-    | MenuItemNavStoryblok
-    | PageStoryblok
-    | PageSectionStoryblok
-    | PersonnelStoryblok
-    | PersonnelCardStoryblok
-    | PersonnelCardGridStoryblok
-    | PersonnelReferenceStoryblok
-    | PostStoryblok
-    | PostBodyStoryblok
-    | PricingCardStoryblok
-    | SiteHeaderStoryblok
-    | SiteHeaderMenuStoryblok
-    | StatisticCardStoryblok
-    | TeaserStoryblok
-    | TestimonialCardStoryblok
-    | TextContentStoryblok
-  )[];
-  _uid: string;
-  component: "display_grid";
   [k: string]: any;
 }
 
@@ -237,7 +188,6 @@ export interface FooterStoryblok {
     | CardGroupStoryblok
     | CarouselStoryblok
     | ContactFormStoryblok
-    | DisplayGridStoryblok
     | FeatureStoryblok
     | FeaturedBlogPostListStoryblok
     | FooterStoryblok
@@ -246,6 +196,7 @@ export interface FooterStoryblok {
     | GlobalStoryblok
     | GlobalReferenceStoryblok
     | GridStoryblok
+    | GridLayoutStoryblok
     | HeroStoryblok
     | HorizontalStackStoryblok
     | ImageCardStoryblok
@@ -269,7 +220,7 @@ export interface FooterStoryblok {
     | StatisticCardStoryblok
     | TeaserStoryblok
     | TestimonialCardStoryblok
-    | TextContentStoryblok
+    | TextCardStoryblok
   )[];
   socials?: (
     | AboutPageTitleStoryblok
@@ -280,7 +231,6 @@ export interface FooterStoryblok {
     | CardGroupStoryblok
     | CarouselStoryblok
     | ContactFormStoryblok
-    | DisplayGridStoryblok
     | FeatureStoryblok
     | FeaturedBlogPostListStoryblok
     | FooterStoryblok
@@ -289,6 +239,7 @@ export interface FooterStoryblok {
     | GlobalStoryblok
     | GlobalReferenceStoryblok
     | GridStoryblok
+    | GridLayoutStoryblok
     | HeroStoryblok
     | HorizontalStackStoryblok
     | ImageCardStoryblok
@@ -312,7 +263,7 @@ export interface FooterStoryblok {
     | StatisticCardStoryblok
     | TeaserStoryblok
     | TestimonialCardStoryblok
-    | TextContentStoryblok
+    | TextCardStoryblok
   )[];
   miscCategories?: (
     | AboutPageTitleStoryblok
@@ -323,7 +274,6 @@ export interface FooterStoryblok {
     | CardGroupStoryblok
     | CarouselStoryblok
     | ContactFormStoryblok
-    | DisplayGridStoryblok
     | FeatureStoryblok
     | FeaturedBlogPostListStoryblok
     | FooterStoryblok
@@ -332,6 +282,7 @@ export interface FooterStoryblok {
     | GlobalStoryblok
     | GlobalReferenceStoryblok
     | GridStoryblok
+    | GridLayoutStoryblok
     | HeroStoryblok
     | HorizontalStackStoryblok
     | ImageCardStoryblok
@@ -355,7 +306,7 @@ export interface FooterStoryblok {
     | StatisticCardStoryblok
     | TeaserStoryblok
     | TestimonialCardStoryblok
-    | TextContentStoryblok
+    | TextCardStoryblok
   )[];
   contactInformation?: (
     | AboutPageTitleStoryblok
@@ -366,7 +317,6 @@ export interface FooterStoryblok {
     | CardGroupStoryblok
     | CarouselStoryblok
     | ContactFormStoryblok
-    | DisplayGridStoryblok
     | FeatureStoryblok
     | FeaturedBlogPostListStoryblok
     | FooterStoryblok
@@ -375,6 +325,7 @@ export interface FooterStoryblok {
     | GlobalStoryblok
     | GlobalReferenceStoryblok
     | GridStoryblok
+    | GridLayoutStoryblok
     | HeroStoryblok
     | HorizontalStackStoryblok
     | ImageCardStoryblok
@@ -398,7 +349,7 @@ export interface FooterStoryblok {
     | StatisticCardStoryblok
     | TeaserStoryblok
     | TestimonialCardStoryblok
-    | TextContentStoryblok
+    | TextCardStoryblok
   )[];
   copywrite?: string;
   extraLinks?: LinkStoryblok[];
@@ -417,7 +368,6 @@ export interface FullBleedStoryblok {
     | CardGroupStoryblok
     | CarouselStoryblok
     | ContactFormStoryblok
-    | DisplayGridStoryblok
     | FeatureStoryblok
     | FeaturedBlogPostListStoryblok
     | FooterStoryblok
@@ -426,6 +376,7 @@ export interface FullBleedStoryblok {
     | GlobalStoryblok
     | GlobalReferenceStoryblok
     | GridStoryblok
+    | GridLayoutStoryblok
     | HeroStoryblok
     | HorizontalStackStoryblok
     | ImageCardStoryblok
@@ -449,7 +400,7 @@ export interface FullBleedStoryblok {
     | StatisticCardStoryblok
     | TeaserStoryblok
     | TestimonialCardStoryblok
-    | TextContentStoryblok
+    | TextCardStoryblok
   )[];
   _uid: string;
   component: "full_bleed";
@@ -488,7 +439,6 @@ export interface GlobalStoryblok {
     | CardGroupStoryblok
     | CarouselStoryblok
     | ContactFormStoryblok
-    | DisplayGridStoryblok
     | FeatureStoryblok
     | FeaturedBlogPostListStoryblok
     | FooterStoryblok
@@ -497,6 +447,7 @@ export interface GlobalStoryblok {
     | GlobalStoryblok
     | GlobalReferenceStoryblok
     | GridStoryblok
+    | GridLayoutStoryblok
     | HeroStoryblok
     | HorizontalStackStoryblok
     | ImageCardStoryblok
@@ -520,7 +471,7 @@ export interface GlobalStoryblok {
     | StatisticCardStoryblok
     | TeaserStoryblok
     | TestimonialCardStoryblok
-    | TextContentStoryblok
+    | TextCardStoryblok
   )[];
   _uid: string;
   component: "global";
@@ -545,7 +496,6 @@ export interface GridStoryblok {
     | CardGroupStoryblok
     | CarouselStoryblok
     | ContactFormStoryblok
-    | DisplayGridStoryblok
     | FeatureStoryblok
     | FeaturedBlogPostListStoryblok
     | FooterStoryblok
@@ -554,6 +504,7 @@ export interface GridStoryblok {
     | GlobalStoryblok
     | GlobalReferenceStoryblok
     | GridStoryblok
+    | GridLayoutStoryblok
     | HeroStoryblok
     | HorizontalStackStoryblok
     | ImageCardStoryblok
@@ -577,10 +528,59 @@ export interface GridStoryblok {
     | StatisticCardStoryblok
     | TeaserStoryblok
     | TestimonialCardStoryblok
-    | TextContentStoryblok
+    | TextCardStoryblok
   )[];
   _uid: string;
   component: "grid";
+  [k: string]: any;
+}
+
+export interface GridLayoutStoryblok {
+  items?: (
+    | AboutPageTitleStoryblok
+    | AccentButtonStoryblok
+    | BannerTextStoryblok
+    | BlogPostListStoryblok
+    | CallToActionBannerStoryblok
+    | CardGroupStoryblok
+    | CarouselStoryblok
+    | ContactFormStoryblok
+    | FeatureStoryblok
+    | FeaturedBlogPostListStoryblok
+    | FooterStoryblok
+    | FullBleedStoryblok
+    | FullBleedHeroStoryblok
+    | GlobalStoryblok
+    | GlobalReferenceStoryblok
+    | GridStoryblok
+    | GridLayoutStoryblok
+    | HeroStoryblok
+    | HorizontalStackStoryblok
+    | ImageCardStoryblok
+    | InfoCardStoryblok
+    | LinkStoryblok
+    | ListStoryblok
+    | LogoAndNameStoryblok
+    | MenuItemActionStoryblok
+    | MenuItemNavStoryblok
+    | PageStoryblok
+    | PageSectionStoryblok
+    | PersonnelStoryblok
+    | PersonnelCardStoryblok
+    | PersonnelCardGridStoryblok
+    | PersonnelReferenceStoryblok
+    | PostStoryblok
+    | PostBodyStoryblok
+    | PricingCardStoryblok
+    | SiteHeaderStoryblok
+    | SiteHeaderMenuStoryblok
+    | StatisticCardStoryblok
+    | TeaserStoryblok
+    | TestimonialCardStoryblok
+    | TextCardStoryblok
+  )[];
+  _uid: string;
+  component: "grid_layout";
   [k: string]: any;
 }
 
@@ -594,7 +594,6 @@ export interface HeroStoryblok {
     | CardGroupStoryblok
     | CarouselStoryblok
     | ContactFormStoryblok
-    | DisplayGridStoryblok
     | FeatureStoryblok
     | FeaturedBlogPostListStoryblok
     | FooterStoryblok
@@ -603,6 +602,7 @@ export interface HeroStoryblok {
     | GlobalStoryblok
     | GlobalReferenceStoryblok
     | GridStoryblok
+    | GridLayoutStoryblok
     | HeroStoryblok
     | HorizontalStackStoryblok
     | ImageCardStoryblok
@@ -626,7 +626,7 @@ export interface HeroStoryblok {
     | StatisticCardStoryblok
     | TeaserStoryblok
     | TestimonialCardStoryblok
-    | TextContentStoryblok
+    | TextCardStoryblok
   )[];
   heading?: string;
   subheading?: string;
@@ -647,7 +647,6 @@ export interface HorizontalStackStoryblok {
     | CardGroupStoryblok
     | CarouselStoryblok
     | ContactFormStoryblok
-    | DisplayGridStoryblok
     | FeatureStoryblok
     | FeaturedBlogPostListStoryblok
     | FooterStoryblok
@@ -656,6 +655,7 @@ export interface HorizontalStackStoryblok {
     | GlobalStoryblok
     | GlobalReferenceStoryblok
     | GridStoryblok
+    | GridLayoutStoryblok
     | HeroStoryblok
     | HorizontalStackStoryblok
     | ImageCardStoryblok
@@ -679,7 +679,7 @@ export interface HorizontalStackStoryblok {
     | StatisticCardStoryblok
     | TeaserStoryblok
     | TestimonialCardStoryblok
-    | TextContentStoryblok
+    | TextCardStoryblok
   )[];
   _uid: string;
   component: "horizontal_stack";
@@ -752,7 +752,6 @@ export interface PageStoryblok {
     | CardGroupStoryblok
     | CarouselStoryblok
     | ContactFormStoryblok
-    | DisplayGridStoryblok
     | FeatureStoryblok
     | FeaturedBlogPostListStoryblok
     | FooterStoryblok
@@ -761,6 +760,7 @@ export interface PageStoryblok {
     | GlobalStoryblok
     | GlobalReferenceStoryblok
     | GridStoryblok
+    | GridLayoutStoryblok
     | HeroStoryblok
     | HorizontalStackStoryblok
     | ImageCardStoryblok
@@ -784,7 +784,7 @@ export interface PageStoryblok {
     | StatisticCardStoryblok
     | TeaserStoryblok
     | TestimonialCardStoryblok
-    | TextContentStoryblok
+    | TextCardStoryblok
   )[];
   body?: (
     | AboutPageTitleStoryblok
@@ -795,7 +795,6 @@ export interface PageStoryblok {
     | CardGroupStoryblok
     | CarouselStoryblok
     | ContactFormStoryblok
-    | DisplayGridStoryblok
     | FeatureStoryblok
     | FeaturedBlogPostListStoryblok
     | FooterStoryblok
@@ -804,6 +803,7 @@ export interface PageStoryblok {
     | GlobalStoryblok
     | GlobalReferenceStoryblok
     | GridStoryblok
+    | GridLayoutStoryblok
     | HeroStoryblok
     | HorizontalStackStoryblok
     | ImageCardStoryblok
@@ -827,7 +827,7 @@ export interface PageStoryblok {
     | StatisticCardStoryblok
     | TeaserStoryblok
     | TestimonialCardStoryblok
-    | TextContentStoryblok
+    | TextCardStoryblok
   )[];
   footer?: (
     | AboutPageTitleStoryblok
@@ -838,7 +838,6 @@ export interface PageStoryblok {
     | CardGroupStoryblok
     | CarouselStoryblok
     | ContactFormStoryblok
-    | DisplayGridStoryblok
     | FeatureStoryblok
     | FeaturedBlogPostListStoryblok
     | FooterStoryblok
@@ -847,6 +846,7 @@ export interface PageStoryblok {
     | GlobalStoryblok
     | GlobalReferenceStoryblok
     | GridStoryblok
+    | GridLayoutStoryblok
     | HeroStoryblok
     | HorizontalStackStoryblok
     | ImageCardStoryblok
@@ -870,7 +870,7 @@ export interface PageStoryblok {
     | StatisticCardStoryblok
     | TeaserStoryblok
     | TestimonialCardStoryblok
-    | TextContentStoryblok
+    | TextCardStoryblok
   )[];
   _uid: string;
   component: "page";
@@ -889,7 +889,6 @@ export interface PageSectionStoryblok {
     | CardGroupStoryblok
     | CarouselStoryblok
     | ContactFormStoryblok
-    | DisplayGridStoryblok
     | FeatureStoryblok
     | FeaturedBlogPostListStoryblok
     | FooterStoryblok
@@ -898,6 +897,7 @@ export interface PageSectionStoryblok {
     | GlobalStoryblok
     | GlobalReferenceStoryblok
     | GridStoryblok
+    | GridLayoutStoryblok
     | HeroStoryblok
     | HorizontalStackStoryblok
     | ImageCardStoryblok
@@ -921,7 +921,7 @@ export interface PageSectionStoryblok {
     | StatisticCardStoryblok
     | TeaserStoryblok
     | TestimonialCardStoryblok
-    | TextContentStoryblok
+    | TextCardStoryblok
   )[];
   _uid: string;
   component: "page_section";
@@ -976,7 +976,6 @@ export interface PostStoryblok {
     | CardGroupStoryblok
     | CarouselStoryblok
     | ContactFormStoryblok
-    | DisplayGridStoryblok
     | FeatureStoryblok
     | FeaturedBlogPostListStoryblok
     | FooterStoryblok
@@ -985,6 +984,7 @@ export interface PostStoryblok {
     | GlobalStoryblok
     | GlobalReferenceStoryblok
     | GridStoryblok
+    | GridLayoutStoryblok
     | HeroStoryblok
     | HorizontalStackStoryblok
     | ImageCardStoryblok
@@ -1008,7 +1008,7 @@ export interface PostStoryblok {
     | StatisticCardStoryblok
     | TeaserStoryblok
     | TestimonialCardStoryblok
-    | TextContentStoryblok
+    | TextCardStoryblok
   )[];
   body?: PostBodyStoryblok[];
   footer?: (
@@ -1020,7 +1020,6 @@ export interface PostStoryblok {
     | CardGroupStoryblok
     | CarouselStoryblok
     | ContactFormStoryblok
-    | DisplayGridStoryblok
     | FeatureStoryblok
     | FeaturedBlogPostListStoryblok
     | FooterStoryblok
@@ -1029,6 +1028,7 @@ export interface PostStoryblok {
     | GlobalStoryblok
     | GlobalReferenceStoryblok
     | GridStoryblok
+    | GridLayoutStoryblok
     | HeroStoryblok
     | HorizontalStackStoryblok
     | ImageCardStoryblok
@@ -1052,7 +1052,7 @@ export interface PostStoryblok {
     | StatisticCardStoryblok
     | TeaserStoryblok
     | TestimonialCardStoryblok
-    | TextContentStoryblok
+    | TextCardStoryblok
   )[];
   _uid: string;
   component: "post";
@@ -1104,7 +1104,6 @@ export interface SiteHeaderStoryblok {
     | CardGroupStoryblok
     | CarouselStoryblok
     | ContactFormStoryblok
-    | DisplayGridStoryblok
     | FeatureStoryblok
     | FeaturedBlogPostListStoryblok
     | FooterStoryblok
@@ -1113,6 +1112,7 @@ export interface SiteHeaderStoryblok {
     | GlobalStoryblok
     | GlobalReferenceStoryblok
     | GridStoryblok
+    | GridLayoutStoryblok
     | HeroStoryblok
     | HorizontalStackStoryblok
     | ImageCardStoryblok
@@ -1136,7 +1136,7 @@ export interface SiteHeaderStoryblok {
     | StatisticCardStoryblok
     | TeaserStoryblok
     | TestimonialCardStoryblok
-    | TextContentStoryblok
+    | TextCardStoryblok
   )[];
   rightSide: (
     | AboutPageTitleStoryblok
@@ -1147,7 +1147,6 @@ export interface SiteHeaderStoryblok {
     | CardGroupStoryblok
     | CarouselStoryblok
     | ContactFormStoryblok
-    | DisplayGridStoryblok
     | FeatureStoryblok
     | FeaturedBlogPostListStoryblok
     | FooterStoryblok
@@ -1156,6 +1155,7 @@ export interface SiteHeaderStoryblok {
     | GlobalStoryblok
     | GlobalReferenceStoryblok
     | GridStoryblok
+    | GridLayoutStoryblok
     | HeroStoryblok
     | HorizontalStackStoryblok
     | ImageCardStoryblok
@@ -1179,7 +1179,7 @@ export interface SiteHeaderStoryblok {
     | StatisticCardStoryblok
     | TeaserStoryblok
     | TestimonialCardStoryblok
-    | TextContentStoryblok
+    | TextCardStoryblok
   )[];
   _uid: string;
   component: "siteHeader";
@@ -1217,9 +1217,9 @@ export interface TestimonialCardStoryblok {
   [k: string]: any;
 }
 
-export interface TextContentStoryblok {
-  body?: RichtextStoryblok;
+export interface TextCardStoryblok {
+  body: RichtextStoryblok;
   _uid: string;
-  component: "text_content";
+  component: "text_card";
   [k: string]: any;
 }
