@@ -1,0 +1,44 @@
+---
+import { storyblokEditable } from '@storyblok/astro'
+import type { CallToActionBannerStoryblok } from '@root/storyblok-component-types/component-types-sb'
+
+interface Props {
+    blok: CallToActionBannerStoryblok
+}
+
+const { blok } = Astro.props
+
+const callToActionLink = (() => {
+    switch(blok.call_to_action_link.linktype) {
+        case 'story':
+            if (blok.call_to_action_link.cached_url === undefined) {
+                throw new Error('Storyblok Url is undefined')
+            }
+            return '/'.concat(blok.call_to_action_link.cached_url)
+        case 'url':
+            if (blok.call_to_action_link.url === undefined) {
+                throw new Error('Storyblok URL is null')
+            }
+            return blok.call_to_action_link.url
+        default:
+            throw new Error('Unknown link type')
+}})()
+---
+
+<div class="hero" {...storyblokEditable(blok)}>
+    <div class="content hero-content flex-col items-start md:flex-row md:items-center">
+        <!-- Banner Header -->
+        <h2 class="max-w-[500px]">
+            {blok.heading}
+        </h2>
+        <!-- Banner Subtext & CTA -->
+        <div class="flex flex-col gap-4 text-left">
+            <p class="sub-2">
+                {blok.subtext}
+            </p>
+            <a href={callToActionLink} class="btn btn-primary max-w-fit">
+                {blok.call_to_action}
+            </a>
+        </div>
+    </div>
+</div>

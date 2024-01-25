@@ -38,7 +38,7 @@ export default defineConfig({
                 accent_button: 'storyblok/blocks/buttons/AccentButton',
                 banner_text: 'storyblok/blocks/banners/BannerText',
                 blog_post_list: 'storyblok/BlogPostList',
-                call_to_action_banner: 'storyblok/CallToActionBanner',
+                call_to_action_banner: 'storyblok/blocks/banners/CallToActionBanner',
                 carousel: 'storyblok/Carousel',
                 contact_form: 'storyblok/ContactForm',
                 featured_blog_post_list: 'storyblok/FeaturedBlogPostList',

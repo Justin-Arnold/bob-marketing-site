@@ -77,7 +77,7 @@ export interface CallToActionBannerStoryblok {
   heading?: string;
   subtext?: string;
   call_to_action?: string;
-  call_to_action_link?: Exclude<MultilinkStoryblok, {linktype?: "email"} | {linktype?: "asset"}>;
+  call_to_action_link: Exclude<MultilinkStoryblok, {linktype?: "email"} | {linktype?: "asset"}>;
   _uid: string;
   component: "call_to_action_banner";
   [k: string]: any;
