@@ -1,32 +1,6 @@
 {
   "components": [
     {
-      "name": "aboutPageTitle",
-      "display_name": "About Page Title",
-      "created_at": "2023-12-27T21:31:28.530Z",
-      "updated_at": "2023-12-27T21:33:09.680Z",
-      "id": 125817,
-      "schema": {
-        "text": {
-          "type": "text",
-          "required": true,
-          "default_value": "About"
-        }
-      },
-      "image": null,
-      "preview_field": null,
-      "is_root": true,
-      "preview_tmpl": null,
-      "is_nestable": false,
-      "all_presets": [],
-      "preset_id": null,
-      "real_name": "About Page Title",
-      "component_group_uuid": "6be3dfcb-c6b5-4fc4-99a6-f5912683163d",
-      "color": null,
-      "icon": null,
-      "component_group_name": ""
-    },
-    {
       "name": "accent_button",
       "display_name": null,
       "created_at": "2024-01-04T15:07:05.161Z",
@@ -50,15 +24,16 @@
       "all_presets": [],
       "preset_id": null,
       "real_name": "accent_button",
-      "component_group_uuid": null,
+      "component_group_uuid": "3b9bf7cc-ae8d-41d0-8000-c2c1386c2f1f",
       "color": null,
-      "icon": null
+      "icon": null,
+      "component_group_name": "Buttons"
     },
     {
-      "name": "bannerText",
+      "name": "banner_text",
       "display_name": null,
       "created_at": "2023-12-28T19:21:05.941Z",
-      "updated_at": "2023-12-28T19:21:33.089Z",
+      "updated_at": "2024-01-25T14:42:24.919Z",
       "id": 125903,
       "schema": {
         "heading": {
@@ -75,10 +50,11 @@
       "is_nestable": true,
       "all_presets": [],
       "preset_id": null,
-      "real_name": "bannerText",
-      "component_group_uuid": null,
+      "real_name": "banner_text",
+      "component_group_uuid": "e4897e5f-bd65-4525-9e2a-3210995f07b4",
       "color": null,
-      "icon": null
+      "icon": null,
+      "component_group_name": "Banners"
     },
     {
       "name": "blog_post_list",

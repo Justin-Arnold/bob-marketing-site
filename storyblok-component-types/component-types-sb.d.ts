@@ -1,12 +1,5 @@
 import {StoryblokStory} from 'storyblok-generate-ts'
 
-export interface AboutPageTitleStoryblok {
-  text: string;
-  _uid: string;
-  component: "aboutPageTitle";
-  [k: string]: any;
-}
-
 export type MultilinkStoryblok =
   | {
       id?: string;
@@ -69,7 +62,7 @@ export interface BannerTextStoryblok {
   heading?: string;
   subText?: string;
   _uid: string;
-  component: "bannerText";
+  component: "banner_text";
   [k: string]: any;
 }
 
@@ -92,7 +85,6 @@ export interface CallToActionBannerStoryblok {
 
 export interface CarouselStoryblok {
   items?: (
-    | AboutPageTitleStoryblok
     | AccentButtonStoryblok
     | BannerTextStoryblok
     | BlogPostListStoryblok
@@ -179,7 +171,6 @@ export interface FlexLayoutStoryblok {
 
 export interface FooterStoryblok {
   logo?: (
-    | AboutPageTitleStoryblok
     | AccentButtonStoryblok
     | BannerTextStoryblok
     | BlogPostListStoryblok
@@ -222,7 +213,6 @@ export interface FooterStoryblok {
     | TextCardStoryblok
   )[];
   socials?: (
-    | AboutPageTitleStoryblok
     | AccentButtonStoryblok
     | BannerTextStoryblok
     | BlogPostListStoryblok
@@ -265,7 +255,6 @@ export interface FooterStoryblok {
     | TextCardStoryblok
   )[];
   miscCategories?: (
-    | AboutPageTitleStoryblok
     | AccentButtonStoryblok
     | BannerTextStoryblok
     | BlogPostListStoryblok
@@ -308,7 +297,6 @@ export interface FooterStoryblok {
     | TextCardStoryblok
   )[];
   contactInformation?: (
-    | AboutPageTitleStoryblok
     | AccentButtonStoryblok
     | BannerTextStoryblok
     | BlogPostListStoryblok
@@ -359,7 +347,6 @@ export interface FooterStoryblok {
 
 export interface FullBleedStoryblok {
   item?: (
-    | AboutPageTitleStoryblok
     | AccentButtonStoryblok
     | BannerTextStoryblok
     | BlogPostListStoryblok
@@ -430,7 +417,6 @@ export interface FullBleedHeroStoryblok {
 
 export interface GlobalStoryblok {
   global?: (
-    | AboutPageTitleStoryblok
     | AccentButtonStoryblok
     | BannerTextStoryblok
     | BlogPostListStoryblok
@@ -487,7 +473,6 @@ export interface GlobalReferenceStoryblok {
 
 export interface GridStoryblok {
   columns?: (
-    | AboutPageTitleStoryblok
     | AccentButtonStoryblok
     | BannerTextStoryblok
     | BlogPostListStoryblok
@@ -536,7 +521,6 @@ export interface GridStoryblok {
 
 export interface GridLayoutStoryblok {
   items?: (
-    | AboutPageTitleStoryblok
     | AccentButtonStoryblok
     | BannerTextStoryblok
     | BlogPostListStoryblok
@@ -585,7 +569,6 @@ export interface GridLayoutStoryblok {
 
 export interface HeroStoryblok {
   preheading?: (
-    | AboutPageTitleStoryblok
     | AccentButtonStoryblok
     | BannerTextStoryblok
     | BlogPostListStoryblok
@@ -638,7 +621,6 @@ export interface HeroStoryblok {
 
 export interface HorizontalStackStoryblok {
   items?: (
-    | AboutPageTitleStoryblok
     | AccentButtonStoryblok
     | BannerTextStoryblok
     | BlogPostListStoryblok
@@ -743,7 +725,6 @@ export interface MenuItemNavStoryblok {
 
 export interface PageStoryblok {
   header?: (
-    | AboutPageTitleStoryblok
     | AccentButtonStoryblok
     | BannerTextStoryblok
     | BlogPostListStoryblok
@@ -786,7 +767,6 @@ export interface PageStoryblok {
     | TextCardStoryblok
   )[];
   body?: (
-    | AboutPageTitleStoryblok
     | AccentButtonStoryblok
     | BannerTextStoryblok
     | BlogPostListStoryblok
@@ -829,7 +809,6 @@ export interface PageStoryblok {
     | TextCardStoryblok
   )[];
   footer?: (
-    | AboutPageTitleStoryblok
     | AccentButtonStoryblok
     | BannerTextStoryblok
     | BlogPostListStoryblok
@@ -880,7 +859,6 @@ export interface PageStoryblok {
 export interface PageSectionStoryblok {
   section_name?: string;
   items?: (
-    | AboutPageTitleStoryblok
     | AccentButtonStoryblok
     | BannerTextStoryblok
     | BlogPostListStoryblok
@@ -967,7 +945,6 @@ export interface PersonnelReferenceStoryblok {
 
 export interface PostStoryblok {
   header?: (
-    | AboutPageTitleStoryblok
     | AccentButtonStoryblok
     | BannerTextStoryblok
     | BlogPostListStoryblok
@@ -1011,7 +988,6 @@ export interface PostStoryblok {
   )[];
   body?: PostBodyStoryblok[];
   footer?: (
-    | AboutPageTitleStoryblok
     | AccentButtonStoryblok
     | BannerTextStoryblok
     | BlogPostListStoryblok
@@ -1095,7 +1071,6 @@ export interface PricingCardStoryblok {
 
 export interface SiteHeaderStoryblok {
   leftSide: (
-    | AboutPageTitleStoryblok
     | AccentButtonStoryblok
     | BannerTextStoryblok
     | BlogPostListStoryblok
@@ -1138,7 +1113,6 @@ export interface SiteHeaderStoryblok {
     | TextCardStoryblok
   )[];
   rightSide: (
-    | AboutPageTitleStoryblok
     | AccentButtonStoryblok
     | BannerTextStoryblok
     | BlogPostListStoryblok

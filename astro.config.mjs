@@ -36,7 +36,7 @@ export default defineConfig({
             },
             components: {
                 accent_button: 'storyblok/blocks/buttons/AccentButton',
-                bannerText: 'storyblok/BannerText',
+                banner_text: 'storyblok/blocks/banners/BannerText',
                 blog_post_list: 'storyblok/BlogPostList',
                 call_to_action_banner: 'storyblok/CallToActionBanner',
                 carousel: 'storyblok/Carousel',
