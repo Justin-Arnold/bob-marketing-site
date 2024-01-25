@@ -1,6 +1,11 @@
 ---
 import { storyblokEditable } from '@storyblok/astro'
 import { renderRichText } from "@storyblok/js";
+import type { PostBodyStoryblok } from '@root/storyblok-component-types/component-types-sb';
+
+interface Props {
+    blok: PostBodyStoryblok
+}
 
 const { blok } = Astro.props
 
@@ -10,6 +15,12 @@ const url = Astro.url.pathname
 const pathList = url.split("/").filter((item) => item !== "")
 const parentPath = pathList[pathList.length - 2]
 const transitionName =  `media-image-${blok.preview.id}-${parentPath}`
+
+if (typeof blok.author === "string") {
+    throw new Error("Author reference failed")
+}
+
+const author = blok.author.content
 ---
 
 <div {...storyblokEditable(blok)} class="p-12">
@@ -30,15 +41,15 @@ const transitionName =  `media-image-${blok.preview.id}-${parentPath}`
                     <span class="card-body flex-row">
                         <div class="avatar">
                             <div class="w-20 rounded-full">
-                                <img src={blok.author.content.photo.filename} class="m-0"/>
+                                <img src={author.photo.filename} class="m-0"/>
                             </div>
                         </div>
                         <span class="flex flex-col items-start">
                             <h3 class="m-0">
-                                {blok.author.content.name}
+                                {author.name}
                             </h3>
                             <p class="text-xs line-clamp-2 m-0 text-left">
-                                {blok.author.content.description}
+                                {author.description}
                             </p>
                         </span>
                     </span>

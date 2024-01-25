@@ -149,8 +149,8 @@ export interface FeatureStoryblok {
 }
 
 export interface FeaturedBlogPostListStoryblok {
-  heading?: string;
-  posts?: (StoryblokStory<PostStoryblok> | string)[];
+  heading: string;
+  posts: (StoryblokStory<PostStoryblok> | string)[];
   _uid: string;
   component: "featured_blog_post_list";
   [k: string]: any;
@@ -906,12 +906,12 @@ export interface PageSectionStoryblok {
 }
 
 export interface PersonnelStoryblok {
-  name?: string;
-  title?: string;
-  photo?: AssetStoryblok;
-  description?: string;
-  quote?: string;
-  quote_author?: string;
+  name: string;
+  title: string;
+  photo: AssetStoryblok;
+  description: string;
+  quote: string;
+  quote_author: string;
   _uid: string;
   component: "personnel";
   [k: string]: any;
@@ -1044,12 +1044,12 @@ export interface RichtextStoryblok {
 }
 
 export interface PostBodyStoryblok {
-  title?: string;
-  description?: string;
-  preview?: AssetStoryblok;
-  posted?: string;
-  author?: StoryblokStory<PersonnelStoryblok> | string;
-  content?: RichtextStoryblok;
+  title: string;
+  description: string;
+  preview: AssetStoryblok;
+  posted: string;
+  author: StoryblokStory<PersonnelStoryblok> | string;
+  content: RichtextStoryblok;
   _uid: string;
   component: "post_body";
   [k: string]: any;

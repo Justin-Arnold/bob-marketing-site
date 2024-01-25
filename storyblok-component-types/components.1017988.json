@@ -75,9 +75,10 @@
       "all_presets": [],
       "preset_id": null,
       "real_name": "blog_post_list",
-      "component_group_uuid": null,
+      "component_group_uuid": "aae3f72c-9b39-44b1-a399-d47d7c6acc0e",
       "color": null,
-      "icon": null
+      "icon": null,
+      "component_group_name": "Blog"
     },
     {
       "name": "call_to_action_banner",
@@ -136,9 +137,10 @@
       "all_presets": [],
       "preset_id": null,
       "real_name": "carousel",
-      "component_group_uuid": null,
+      "component_group_uuid": "26907bb9-2a02-4d8f-8f2d-8982a5f79c6c",
       "color": null,
-      "icon": null
+      "icon": null,
+      "component_group_name": "Layouts"
     },
     {
       "name": "contact_form",
@@ -168,9 +170,10 @@
       "all_presets": [],
       "preset_id": null,
       "real_name": "contact_form",
-      "component_group_uuid": null,
+      "component_group_uuid": "9e99107a-8590-4283-aaa4-82201f039c1a",
       "color": null,
-      "icon": null
+      "icon": null,
+      "component_group_name": "Forms"
     },
     {
       "name": "feature",
@@ -199,12 +202,13 @@
       "name": "featured_blog_post_list",
       "display_name": null,
       "created_at": "2024-01-16T13:36:05.056Z",
-      "updated_at": "2024-01-16T13:43:09.140Z",
+      "updated_at": "2024-01-25T15:20:56.797Z",
       "id": 129374,
       "schema": {
         "heading": {
           "type": "text",
-          "pos": 0
+          "pos": 0,
+          "required": true
         },
         "posts": {
           "type": "options",
@@ -213,7 +217,8 @@
             "post"
           ],
           "key": "personnel",
-          "pos": 1
+          "pos": 1,
+          "required": true
         }
       },
       "image": null,
@@ -224,9 +229,10 @@
       "all_presets": [],
       "preset_id": null,
       "real_name": "featured_blog_post_list",
-      "component_group_uuid": null,
+      "component_group_uuid": "aae3f72c-9b39-44b1-a399-d47d7c6acc0e",
       "color": null,
-      "icon": null
+      "icon": null,
+      "component_group_name": "Blog"
     },
     {
       "name": "flex_layout",
@@ -839,26 +845,35 @@
       "name": "personnel",
       "display_name": null,
       "created_at": "2024-01-16T01:15:31.892Z",
-      "updated_at": "2024-01-16T01:17:22.083Z",
+      "updated_at": "2024-01-25T15:26:26.674Z",
       "id": 129281,
       "schema": {
         "name": {
-          "type": "text"
+          "type": "text",
+          "required": true
         },
         "title": {
-          "type": "text"
+          "type": "text",
+          "required": true
         },
         "photo": {
-          "type": "asset"
+          "type": "asset",
+          "required": true,
+          "filetypes": [
+            "images"
+          ]
         },
         "description": {
-          "type": "text"
+          "type": "text",
+          "required": true
         },
         "quote": {
-          "type": "text"
+          "type": "text",
+          "required": true
         },
         "quote_author": {
-          "type": "text"
+          "type": "text",
+          "required": true
         }
       },
       "image": null,
@@ -1008,25 +1023,32 @@
       "name": "post_body",
       "display_name": null,
       "created_at": "2024-01-10T13:30:50.161Z",
-      "updated_at": "2024-01-16T15:26:55.658Z",
+      "updated_at": "2024-01-25T15:20:19.593Z",
       "id": 128127,
       "schema": {
         "title": {
           "type": "text",
-          "pos": 0
+          "pos": 0,
+          "required": true
         },
         "description": {
           "type": "text",
-          "pos": 1
+          "pos": 1,
+          "required": true
         },
         "preview": {
           "type": "asset",
-          "pos": 2
+          "pos": 2,
+          "required": true,
+          "filetypes": [
+            "images"
+          ]
         },
         "posted": {
           "type": "datetime",
           "disable_time": true,
-          "pos": 3
+          "pos": 3,
+          "required": true
         },
         "author": {
           "type": "option",
@@ -1035,11 +1057,13 @@
           "source": "internal_stories",
           "filter_content_type": [
             "personnel"
-          ]
+          ],
+          "required": true
         },
         "content": {
           "type": "richtext",
-          "pos": 5
+          "pos": 5,
+          "required": true
         }
       },
       "image": null,
@@ -1050,9 +1074,10 @@
       "all_presets": [],
       "preset_id": null,
       "real_name": "post_body",
-      "component_group_uuid": null,
+      "component_group_uuid": "aae3f72c-9b39-44b1-a399-d47d7c6acc0e",
       "color": null,
-      "icon": null
+      "icon": null,
+      "component_group_name": "Blog"
     },
     {
       "name": "pricing-card",
