@@ -39,7 +39,7 @@ export default defineConfig({
                 banner_text: 'storyblok/blocks/banners/BannerText',
                 blog_post_list: 'storyblok/blocks/blog/BlogPostList',
                 call_to_action_banner: 'storyblok/blocks/banners/CallToActionBanner',
-                carousel: 'storyblok/Carousel',
+                carousel: 'storyblok/blocks/layouts/Carousel',
                 contact_form: 'storyblok/ContactForm',
                 featured_blog_post_list: 'storyblok/blocks/blog/FeaturedBlogPostList',
                 flex_layout: 'storyblok/blocks/layouts/FlexLayout',
