@@ -1,6 +1,11 @@
 ---
 import { storyblokEditable } from '@storyblok/astro'
-import SocialsBar from '../components/SocialsBar.astro'
+import SocialsBar from '@components/SocialsBar.astro'
+import type { ContactFormStoryblok } from '@root/storyblok-component-types/component-types-sb'
+
+interface Props {
+    blok: ContactFormStoryblok
+}
 
 const { blok } = Astro.props
 ---
