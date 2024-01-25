@@ -1,10 +1,14 @@
 ---
 import { storyblokEditable } from '@storyblok/astro'
+import type { LogoAndNameStoryblok } from '@root/storyblok-component-types/component-types-sb'
 
+interface Props {
+    blok: LogoAndNameStoryblok
+}
 const { blok } = Astro.props
 ---
 
 <a {...storyblokEditable(blok)} class="h-12 py-2 flex items-center gap-2" href="/">
-    <img src={blok.logo.filename} alt="Astro Logo" class="h-full" />
+    <img src={blok.logo?.filename} alt="Astro Logo" class="h-full" />
     <h1 class="text-neutral text-2xl font-thin text-nowrap">{blok.name}</h1>
 </a>
