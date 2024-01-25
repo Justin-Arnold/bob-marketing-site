@@ -43,7 +43,7 @@ export default defineConfig({
                 contact_form: 'storyblok/ContactForm',
                 featured_blog_post_list: 'storyblok/blocks/blog/FeaturedBlogPostList',
                 flex_layout: 'storyblok/blocks/layouts/FlexLayout',
-                footer: 'storyblok/AppFooter',
+                footer: 'storyblok/blocks/globals/AppFooter',
                 full_bleed_hero: 'storyblok/blocks/hero/FullBleed',
                 global_reference: 'storyblok/content/GlobalReference',
                 grid_layout: 'storyblok/blocks/layouts/GridLayout',

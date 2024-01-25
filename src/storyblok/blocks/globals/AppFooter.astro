@@ -1,6 +1,11 @@
 ---
 import { storyblokEditable } from '@storyblok/astro'
 import StoryblokComponent from '@storyblok/astro/StoryblokComponent.astro'
+import type { FooterStoryblok } from '@root/storyblok-component-types/component-types-sb'
+
+interface Props {
+    blok: FooterStoryblok
+}
 
 const { blok } = Astro.props
 ---
@@ -14,7 +19,7 @@ const { blok } = Astro.props
         <a class="link link-hover">Advertisement</a>
     </nav>
     <nav>
-      <header class="footer-title">Company</header>
+        <header class="footer-title">Company</header>
         <a class="link link-hover">About us</a>
         <a class="link link-hover">Contact</a>
         <a class="link link-hover">Jobs</a>
@@ -30,7 +35,7 @@ const { blok } = Astro.props
 <footer class="footer px-10 py-4 border-t bg-base-200 text-base-content border-base-300">
     <aside class="items-center grid-flow-col">
         {
-            blok.logo.map((subBlok: any) => {
+            blok.logo?.map((subBlok: any) => {
                 return <StoryblokComponent blok={subBlok} />
             })
         }
@@ -44,42 +49,3 @@ const { blok } = Astro.props
     </nav>
 </footer>
 
-<!-- <div {...storyblokEditable(blok)} class="bg-base-100 h-[300px] mt-40 w-full flex justify-center">
-
-    <div class="flex flex-col max-w-[1000px] w-full h-full justify-between py-2">
-        <div class="flex justify-between">
-            <div>
-                {
-                    blok.logo.map((subBlok: any) => {
-                        return <StoryblokComponent blok={subBlok} />
-                    })
-                }
-            </div>
-            <div class="w-80">
-                {
-                    blok.contactInformation.map((subBlok: any) => {
-                        return <StoryblokComponent blok={subBlok} />
-                    })
-                }
-            </div>
-        </div>
-        <div id="extraLinks" class="flex gap-4 items-center">
-            <p class="text-base-100">{blok.copywrite}</p>
-            <span class="text-base-100">|</span>
-            {
-                blok.extraLinks.map((subBlok: any) => {
-                    return (
-                        <StoryblokComponent blok={subBlok} />
-                        <span id="linkSeparator" class="text-base-100">|</span>
-                    )
-                })
-            }
-        </div>
-    </div>
-</span> -->
-
-<style scoped>
-    #extraLinks #linkSeparator:last-child {
-        visibility: hidden;
-    }
-</style>
