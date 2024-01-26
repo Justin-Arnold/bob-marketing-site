@@ -1,6 +1,11 @@
 ---
 import { storyblokEditable } from '@storyblok/astro'
 import StoryblokComponent from '@storyblok/astro/StoryblokComponent.astro'
+import type { SiteHeaderStoryblok } from '@root/storyblok-component-types/component-types-sb'
+
+interface Props {
+    blok: SiteHeaderStoryblok
+}
 
 const { blok } = Astro.props
 ---
@@ -8,7 +13,7 @@ const { blok } = Astro.props
 <div {...storyblokEditable(blok)} class="sticky top-0 z-[100] navbar bg-base-100 justify-center" transition:name="header">
     <div class="navbar-start max-w-[500px]">
         {
-            blok.leftSide.map((subBlok: any) => {
+            blok.leftSide.map((subBlok) => {
                 return <StoryblokComponent blok={subBlok} />
             })
         }

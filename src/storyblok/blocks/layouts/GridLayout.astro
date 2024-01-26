@@ -1,13 +1,17 @@
 ---
 import { storyblokEditable } from '@storyblok/astro'
 import StoryblokComponent from '@storyblok/astro/StoryblokComponent.astro'
+import type { GridLayoutStoryblok } from '@root/storyblok-component-types/component-types-sb'
 
+interface Props {
+    blok: GridLayoutStoryblok
+}
 const { blok } = Astro.props
 ---
 
 <div {...storyblokEditable(blok)} class="grid grid-cols-3 gap-4">
     {
-        blok.items.map((subBlok: any) => {
+        blok.items?.map((subBlok: any) => {
             return <StoryblokComponent blok={subBlok} />
         })
     }

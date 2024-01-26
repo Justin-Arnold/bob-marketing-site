@@ -1,6 +1,10 @@
 ---
 import { storyblokEditable } from '@storyblok/astro'
+import type { TestimonialCardStoryblok } from '@root/storyblok-component-types/component-types-sb'
 
+interface Props {
+    blok: TestimonialCardStoryblok
+}
 const { blok } = Astro.props
 ---
 

@@ -1,6 +1,11 @@
 ---
-import PostCard from '../components/PostCard.astro'
+import PostCard from '../../../components/PostCard.astro'
 import { storyblokEditable } from '@storyblok/astro'
+import type { FeaturedBlogPostListStoryblok } from '@root/storyblok-component-types/component-types-sb'
+
+interface Props {
+    blok: FeaturedBlogPostListStoryblok
+}
 
 const { blok } = Astro.props
 

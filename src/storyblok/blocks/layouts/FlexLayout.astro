@@ -1,13 +1,17 @@
 ---
 import { storyblokEditable } from '@storyblok/astro'
 import StoryblokComponent from '@storyblok/astro/StoryblokComponent.astro'
+import type { FlexLayoutStoryblok } from '@root/storyblok-component-types/component-types-sb'
 
+interface Props {
+    blok: FlexLayoutStoryblok
+}
 const { blok } = Astro.props
 ---
 
 <div {...storyblokEditable(blok)} class="flex gap-8 flex-wrap card-group-container">
     {
-        blok.cards.map((blok: any) => {
+        blok.items?.map((blok) => {
             return <StoryblokComponent blok={blok} />
         })
     }

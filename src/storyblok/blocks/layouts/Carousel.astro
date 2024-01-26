@@ -1,0 +1,48 @@
+---
+import { storyblokEditable } from '@storyblok/astro'
+import StoryblokComponent from '@storyblok/astro/StoryblokComponent.astro'
+import type { CarouselStoryblok } from '@root/storyblok-component-types/component-types-sb'
+
+interface Props {
+    blok: CarouselStoryblok
+}
+
+const { blok } = Astro.props
+
+let itemCount = 0
+let itemPaginatorCount = 0
+---
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const scrollButtons = document.querySelectorAll('button.carousel-scroll-button')
+    scrollButtons.forEach((button) => {
+        button.addEventListener('click', () => {
+            const buttonId = button.id
+            const item = document.getElementById(`item${buttonId}`)
+            item?.scrollIntoView({ block: 'nearest', inline: 'center' })
+        })
+    })
+});
+</script>
+
+<div {...storyblokEditable(blok)} class="carousel w-full">
+    {
+        blok.items?.map((blok: any) => {
+            itemCount++
+            return <div id={`item${itemCount}`} class="carousel-item w-full">
+                <StoryblokComponent blok={blok} />
+            </div>
+        })
+    }
+</div>
+<div class="flex justify-center w-full py-2 gap-2">
+    {
+        blok.items?.map(() => {
+            itemPaginatorCount++
+            return <button id={String(itemPaginatorCount)} class="btn btn-xs carousel-scroll-button">
+                {itemPaginatorCount}
+            </button>
+        })
+    }
+</div>

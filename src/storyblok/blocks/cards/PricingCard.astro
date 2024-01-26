@@ -1,6 +1,11 @@
 ---
 import { storyblokEditable } from '@storyblok/astro'
-import CostAnimation from '../components/CostAnimation.astro'
+import CostAnimation from '@components/CostAnimation.astro'
+import type { PricingCardStoryblok } from '@root/storyblok-component-types/component-types-sb'
+
+interface Props {
+    blok: PricingCardStoryblok
+}
 
 const { blok } = Astro.props
 ---
@@ -13,7 +18,7 @@ const { blok } = Astro.props
             </div>
             <div class="h-[300px] sm:h-[400px]">
                 <p class="text-center">
-                    <span class="font-semibold text-[70px] sm:text-[100px] text-primary">
+                    <span class="font-semibold text-[70px] sm:text-[100px] text-secondary">
                         ${blok.cost_amount}
                     </span>
                     <span class="text-5xl font-thin">
@@ -28,7 +33,7 @@ const { blok } = Astro.props
             </button>
             <p>{blok.feature_title}</p>
             <ul class="list-disc list-inside font-light">
-                {blok.features.split(',').map((feature: any) => (
+                {blok.features?.split(',').map((feature) => (
                     <li>{feature}</li>
                 ))}
             </ul>

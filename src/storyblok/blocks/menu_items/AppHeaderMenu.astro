@@ -2,6 +2,11 @@
 import { storyblokEditable } from '@storyblok/astro'
 import StoryblokComponent from '@storyblok/astro/StoryblokComponent.astro'
 import { Icon } from 'astro-icon/components'
+import type { SiteHeaderMenuStoryblok } from '@root/storyblok-component-types/component-types-sb'
+
+interface Props {
+    blok: SiteHeaderMenuStoryblok
+}
 
 const { blok } = Astro.props
 ---
@@ -11,7 +16,7 @@ const { blok } = Astro.props
     <span class="hidden md:block">
         <ul class="menu menu-horizontal items-center flex-nowrap">
             {
-                blok.items.map((subBlok: any) => {
+                blok.items?.map((subBlok: any) => {
                     return (
                         <li>
                             <StoryblokComponent blok={subBlok} />
@@ -28,7 +33,7 @@ const { blok } = Astro.props
         </summary>
         <ul class="-right-2 dropdown-content z-[1] menu p-4 shadow bg-base-100 w-screen items-end">
             {
-                blok.items.map((subBlok: any) => {
+                blok.items?.map((subBlok: any) => {
                     return (
                         <li class="w-full items-end !text-xl">
                             <StoryblokComponent blok={subBlok} />

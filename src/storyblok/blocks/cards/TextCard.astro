@@ -1,0 +1,19 @@
+---
+import { storyblokEditable, renderRichText } from '@storyblok/astro'
+import type { TextCardStoryblok } from '@root/storyblok-component-types/component-types-sb'
+
+interface Props {
+    blok: TextCardStoryblok
+}
+
+const { blok } = Astro.props
+const content = renderRichText(blok.body)
+---
+
+<div {...storyblokEditable(blok)} class="card bg-base-200 mx-auto">
+    <div class="card-body">
+        <div class="prose prose-lg text-neutral prose-a:text-primary">
+            <Fragment set:html={content} />
+        </div>
+    </div>
+</div>

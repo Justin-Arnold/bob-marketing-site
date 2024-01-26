@@ -1,11 +1,18 @@
 ---
 import { storyblokEditable } from '@storyblok/astro'
+import type { AccentButtonStoryblok } from '@root/storyblok-component-types/component-types-sb'
+
+interface Props {
+    blok: AccentButtonStoryblok
+}
 
 const { blok } = Astro.props
+
+const link = blok.link.linktype === 'story' ? `/${blok.link.cached_url}` : blok.link.url
 ---
 
 <div {...storyblokEditable(blok)} class="w-40 rounded-full bg-primary/20 border-primary border text-primary">
-    <a href={blok.link.cached_url ?? blok.link.url} class="flex items-center justify-center gap-2">
+    <a href={link} class="flex items-center justify-center gap-2">
         <p class="text-thin">
             {blok.title}
         </p>
