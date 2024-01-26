@@ -32,6 +32,7 @@ export default defineConfig({
         storyblok({
             accessToken: process.env.STORYBLOK_TOKEN,
             apiOptions: {
+                resolveNestedRelations: true,
                 region: "us"
             },
             components: {

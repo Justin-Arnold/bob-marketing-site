@@ -1,11 +1,39 @@
 ---
 import StoryblokComponent from '@storyblok/astro/StoryblokComponent.astro'
+import { useStoryblokApi } from '@storyblok/astro'
+import type { GlobalReferenceStoryblok } from '@root/storyblok-component-types/component-types-sb'
+
+interface Props {
+    blok: GlobalReferenceStoryblok
+}
 
 const { blok } = Astro.props
+const sbApi = useStoryblokApi();
+
+const { data } =  await sbApi.get(`cdn/stories`, {
+    starts_with: `globals`,
+    version: import.meta.env.DEV ? "draft" : "published",
+})
+
+const reference = (() => {
+    if (!blok.reference) {
+        throw new Error("Global reference missing")
+    }
+    if (typeof blok.reference === 'string') {
+        // This is needed to resolve relations more then 2 level deep.
+        const manaulResoltion = data.stories.find((story: GlobalReferenceStoryblok) => story.uuid === blok.reference);
+        return manaulResoltion.content.global
+    }
+    const blockReference = blok.reference.content.global
+    if (!blockReference) {
+        throw new Error("Global reference content missing")
+    }
+    return blockReference
+})()
 ---
 
 {
-    blok.reference.content.global.map((blok: any) => {
+    reference.map((blok: any) => {
         return <StoryblokComponent blok={blok} />
     })
 }
