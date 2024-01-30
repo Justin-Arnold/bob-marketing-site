@@ -5,7 +5,18 @@ const { addDynamicIconSelectors } = require('@iconify/tailwind');
 export default {
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
 	theme: {
-		extend: {},
+		extend: {
+            keyframes: {
+                'bounce-right': {
+                    '0%, 100%': { transform: 'translateX(0)' },
+                    '25%, 75%': { transform: 'translateX(20%)' },
+                    '50%': { transform: 'translateX(60%)' }
+                }
+            },
+            animation: {
+                'bounce-right': 'bounce-right 1s linear infinite',
+            }
+        },
 	},
     daisyui: {
         themes: [
