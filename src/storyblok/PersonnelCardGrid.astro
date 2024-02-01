@@ -46,11 +46,13 @@ const { blok } = Astro.props
         }
     }
 
-    //add event listener to each card
-    var cards = document.querySelectorAll('.flip-card-container');
-    cards.forEach(card => {
-        card.addEventListener('click', function() {
-            flipCard(card.id);
+    document.addEventListener('DOMContentLoaded', () => {
+        //add event listener to each card
+        var cards = document.querySelectorAll('.flip-card-container');
+        cards.forEach(card => {
+            card.addEventListener('click', function() {
+                flipCard(card.id);
+            });
         });
     });
 </script>
